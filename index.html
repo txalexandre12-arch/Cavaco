@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const originalStringify = JSON.stringify;
+        JSON.stringify = function (value, replacer, space) {
+          const seen = new WeakSet();
+          function safeReplacer(key, val) {
+            if (val !== null && typeof val === "object") {
+              if (val instanceof Node) {
+                return {
+                  nodeType: val.nodeType,
+                  nodeName: val.nodeName,
+                  id: val.id || undefined,
+                  className: val.className || undefined
+                };
+              }
+              if (seen.has(val)) {
+                return "[Circular]";
+              }
+              seen.add(val);
+            }
+            if (typeof replacer === "function") {
+              return replacer.call(this, key, val);
+            }
+            return val;
+          }
+
+          const finalReplacer = Array.isArray(replacer)
+            ? function(key, val) {
+                return replacer.includes(key) ? safeReplacer.call(this, key, val) : undefined;
+              }
+            : safeReplacer;
+
+          try {
+            return originalStringify(value, finalReplacer, space);
+          } catch (err) {
+            try {
+              const simpleSeen = new WeakSet();
+              return originalStringify(value, function(k, v) {
+                if (v !== null && typeof v === "object") {
+                  if (v instanceof Node) return "[DOMNode]";
+                  if (simpleSeen.has(v)) return "[Circular]";
+                  simpleSeen.add(v);
+                }
+                return v;
+              }, space);
+            } catch (innerErr) {
+              return '"[Unserializable]"';
+            }
+          }
+        };
+      })();
+    </script>
+
+<script>
+  window.pixelId = "6a2330e1e86f5c6947a3ed0d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Google AI Studio App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
