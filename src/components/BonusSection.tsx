@@ -1,5 +1,5 @@
 import React from "react";
-import { Gift, BookOpen, Layers, CalendarRange, Clock, ArrowRight, ShieldCheck } from "lucide-react";
+import { Gift, BookOpen, Layers, CalendarRange, Clock, ShieldCheck } from "lucide-react";
 
 export default function BonusSection() {
   const bonuses = [
@@ -32,13 +32,6 @@ export default function BonusSection() {
       icon: <Clock className="w-5 h-5 text-gold" />,
     },
   ];
-
-  const handleScrollToOffer = () => {
-    const offerSec = document.getElementById("offer-section");
-    if (offerSec) {
-      offerSec.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="bonus-section" className="py-14 bg-white text-neutral-900 border-t border-b border-neutral-100 px-4">
@@ -102,18 +95,10 @@ export default function BonusSection() {
           ))}
         </div>
 
-        {/* Action Call for Checkout */}
-        <div className="mt-8 text-center space-y-3">
-          <button
-            onClick={handleScrollToOffer}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold rounded-xl shadow-md transition-all duration-200 uppercase tracking-wider text-xs sm:text-sm cursor-pointer hover:scale-[1.01] active:scale-100"
-          >
-            Aproveitar Método + Bônus por R$ 19,90 <ArrowRight className="w-4 h-4 shrink-0" />
-          </button>
-          <div className="flex items-center justify-center gap-1 text-[11px] text-neutral-400">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span>Compra Segura • Acesso Imediato</span>
-          </div>
+        {/* Trust information */}
+        <div className="mt-8 flex items-center justify-center gap-1 text-[11px] text-neutral-400">
+          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+          <span>Compra Segura • Acesso Imediato</span>
         </div>
 
       </div>
