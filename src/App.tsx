@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import HeroSection from "./components/HeroSection";
+import ProblemsAndSolutionSection from "./components/ProblemsAndSolutionSection";
 import OQueVaiReceberSection from "./components/OQueVaiReceberSection";
-import BonusSection from "./components/BonusSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import OfferSection from "./components/OfferSection";
 import WarrantyAndFaqSection from "./components/WarrantyAndFaqSection";
@@ -39,11 +39,11 @@ export default function App() {
         {/* 1. HERO FOLD */}
         <HeroSection />
 
+        {/* COMPREHENSIVE PROBLEMS & SOLUTIONS */}
+        <ProblemsAndSolutionSection />
+
         {/* 2. O QUE VOCÊ RECEBE */}
         <OQueVaiReceberSection />
-
-        {/* BONUS SECTION */}
-        <BonusSection />
 
         {/* 3. DEPOIMENTOS */}
         <TestimonialsSection />
