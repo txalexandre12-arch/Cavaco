@@ -73,12 +73,12 @@ export default function OfferSection() {
               <p className="text-[10px] text-neutral-500 font-black uppercase tracking-wider">Por apenas:</p>
               <div className="flex items-baseline justify-center gap-1">
                 <span className="text-xl font-extrabold text-[#22C55E]">R$</span>
-                <span className="text-4xl sm:text-5.5xl font-display font-black text-[#22C55E] tracking-tight">19,90</span>
+                <span className="text-4xl sm:text-5.5xl font-display font-black text-[#22C55E] tracking-tight">27,00</span>
               </div>
             </div>
 
             <div className="text-[11px] font-black text-emerald-700 bg-emerald-100/60 inline-block px-3 py-1 rounded-full uppercase tracking-wider">
-              🔥 Você economiza R$ 77,10 hoje
+              🔥 Você economiza R$ 70,00 hoje
             </div>
           </div>
 
