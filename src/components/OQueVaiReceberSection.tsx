@@ -1,88 +1,92 @@
 import React from "react";
-import { Music, CheckCircle, Disc, BookOpen, Layers, Star } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
 
 export default function OQueVaiReceberSection() {
-  const items = [
-    {
-      title: "Guia Completo de Cavaquinho",
-      description: "Do absoluto zero às primeiras soltas de samba, com posturas corretas e trocas práticas.",
-      icon: <Music className="w-5 h-5 text-emerald-600 shrink-0" />,
-    },
-    {
-      title: "Guia Completo de Banjo",
-      description: "Aprenda a mecânica correta para obter o som metálico e marcante clássico do pagode.",
-      icon: <Disc className="w-5 h-5 text-emerald-600 shrink-0" />,
-    },
-    {
-      title: "+300 Cifras de Pagode Organizadas",
-      description: "As músicas mais amadas tocadas nas rodas, com acordes simplificados para iniciantes.",
-      icon: <Layers className="w-5 h-5 text-emerald-600 shrink-0" />,
-      isBonus: true,
-    },
-    {
-      title: "Dicionário de Acordes",
-      description: "Consulte rapidamente todas as posições essenciais em um design limpo e ilustrado.",
-      icon: <BookOpen className="w-5 h-5 text-emerald-600 shrink-0" />,
-      isBonus: true,
-    },
-    {
-      title: "Cronograma de Treino para Iniciantes",
-      description: "Um passo a passo diário detalhado para você saber exatamente o que treinar a cada dia.",
-      icon: <CheckCircle className="w-5 h-5 text-emerald-600 shrink-0" />,
-      isBonus: true,
-    },
-    {
-      title: "Atualizações Futuras",
-      description: "Tenha acesso vitalício a toda e qualquer melhoria ou material complementar futuro.",
-      icon: <Star className="w-5 h-5 text-emerald-600 shrink-0" />,
-      isBonus: true,
-    },
+  const images = [
+    "/0.png",
+    "/1.png",
+    "/2.png",
+    "/3.png",
+    "/4.png",
+    "/5.png",
+    "/6.png",
+    "/7.png"
   ];
 
   return (
-    <section id="receive-section" className="py-16 bg-neutral-50/40 px-4 border-t border-b border-neutral-100 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto space-y-12">
+    <section id="receive-section" className="py-16 bg-[#FAFAFA] px-4 border-t border-b border-neutral-100 relative overflow-hidden select-none">
+      {/* Inject custom inline style to make the Swiper wrapper transition linear */}
+      <style>{`
+        #receive-section .swiper-wrapper {
+          transition-timing-function: linear !important;
+        }
+      `}</style>
+      
+      {/* Decorative subtle background glows */}
+      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div className="max-w-6xl mx-auto space-y-12 relative z-10">
         
-        {/* Simple Section Header */}
+        {/* Simple Crisp Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <h2 className="text-3xl font-display font-extrabold text-neutral-900 tracking-tight">
+          <h2 className="text-3xl font-display font-black text-neutral-900 tracking-tight sm:text-4xl">
             O Que Você Vai Receber
           </h2>
           <p className="text-neutral-500 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
-            Um compilado definitivo em formato digital, direto ao ponto, planejado milimetricamente para acelerar seu aprendizado sem perda de tempo.
+            Veja uma prévia exclusiva de todo o material didático e conteúdo completo que estará imediatamente disponível para você.
           </p>
           <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-bold leading-none">
-            <span>🎁</span> Você ainda recebe 4 bônus exclusivos sem custo adicional.
+            <span>🎁</span> Acesso imediato no celular, tablet ou computador.
           </div>
         </div>
 
-        {/* List of items styled as a clean/compact 2-column grid layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 select-none">
-          {items.map((item, idx) => (
-            <div
-              key={idx}
-              className="relative bg-white border border-neutral-200/50 rounded-2xl p-5 sm:p-6 flex gap-4 items-start shadow-sm hover:shadow-md hover:border-emerald-250 transition-all duration-200 group"
-            >
-              <div className="p-2.5 bg-neutral-50 border border-neutral-100 rounded-xl text-emerald-800 shrink-0">
-                {item.icon}
-              </div>
-              <div className="space-y-1 text-left w-full pr-16 animate-none">
-                <h3 className="text-base font-bold text-neutral-900 leading-tight">
-                  {item.title}
-                </h3>
-                <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-
-              {/* Absolute Bonus Badge inside the card */}
-              {item.isBonus && (
-                <span className="absolute top-5 right-5 inline-flex items-center gap-0.5 px-2.5 py-0.5 rounded-full bg-emerald-50 border border-emerald-250 text-emerald-700 text-[9px] font-black uppercase tracking-wider shadow-sm select-none transition-transform duration-200 group-hover:scale-105">
-                  BÔNUS
-                </span>
-              )}
-            </div>
-          ))}
+        {/* Premium Swiper Carousel Container */}
+        <div className="w-full relative px-2 sm:px-4">
+          <Swiper
+            modules={[Autoplay]}
+            autoplay={{
+              delay: 0,
+              disableOnInteraction: false,
+            }}
+            loop={true}
+            speed={3000}
+            grabCursor={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              },
+            }}
+            className="w-full !py-4"
+          >
+            {images.map((imgSrc, idx) => (
+              <SwiperSlide key={idx} className="flex items-center justify-center">
+                <div className="w-full max-w-[280px] sm:max-w-none bg-white rounded-2xl border border-neutral-200/60 p-2 sm:p-3 shadow-sm hover:shadow-lg hover:border-emerald-200 hover:-translate-y-1 hover:scale-[1.03] transition-all duration-300 group overflow-hidden">
+                  <div className="aspect-[3/4] relative bg-neutral-50/50 rounded-xl overflow-hidden flex items-center justify-center">
+                    <img
+                      src={imgSrc}
+                      alt={`Prévia do Material ${idx + 1}`}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
       </div>

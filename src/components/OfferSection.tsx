@@ -1,124 +1,157 @@
 import React from "react";
-import { Check, ShieldCheck, Lock, Zap } from "lucide-react";
-
-// Import premium bundle mockup automatically compiled by Vite
-// @ts-ignore
-import bundleMockup from "../assets/images/bundle_mockup_1781461284286.jpg";
+import { Check, Shield, Zap, Star, Sparkles, Award } from "lucide-react";
 
 export default function OfferSection() {
   const items = [
-    { isBonus: false, text: "Guia Completo de Cavaquinho" },
-    { isBonus: false, text: "Guia Completo de Banjo" },
-    { isBonus: true, text: "+300 Cifras de Pagode Organizadas" },
-    { isBonus: true, text: "Dicionário Completo de Acordes" },
-    { isBonus: true, text: "Cronograma de Treino para Iniciantes" },
-    { isBonus: true, text: "Atualizações Futuras Gratuitas" },
+    {
+      isBonus: false,
+      text: "Guia Completo de Cavaquinho",
+    },
+    {
+      isBonus: false,
+      text: "Guia Completo de Banjo",
+    },
+    {
+      isBonus: true,
+      text: "+300 Cifras de Pagode Organizadas",
+      badge: "BÔNUS",
+    },
+    {
+      isBonus: true,
+      text: "Dicionário Completo de Acordes",
+      badge: "BÔNUS",
+    },
+    {
+      isBonus: true,
+      text: "Cronograma de Treino para Iniciantes",
+      badge: "BÔNUS",
+    },
+    {
+      isBonus: true,
+      text: "Atualizações Futuras Gratuitas",
+      badge: "BÔNUS",
+    },
   ];
 
   return (
-    <section id="offer-section" className="py-12 bg-[#FAFAFA] px-4 relative overflow-hidden border-t border-neutral-150/60 select-none">
+    <section id="offer-section" className="py-10 bg-[#FAFAFA] px-4 relative overflow-hidden border-t border-neutral-150/60 select-none">
       
-      {/* Subtle decorative background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Subtle background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
 
-      <div className="max-w-md mx-auto relative z-10">
+      <div className="max-w-md mx-auto relative z-10 space-y-4">
         
-        {/* SINGLE INTEGRATED CONTAINER */}
-        <div className="bg-white rounded-3xl border border-neutral-200 shadow-xl overflow-hidden p-5 sm:p-6 space-y-4">
+        {/* COMPACT HEADER */}
+        <div className="text-center">
+          <h2 className="text-xl sm:text-2xl font-display font-black text-neutral-900 tracking-tight flex items-center justify-center gap-2">
+            <span>🎁</span> VOCÊ RECEBERÁ HOJE:
+          </h2>
+        </div>
+
+        {/* SINGLE INTEGRATED PREMIUM CHECKOUT CARD */}
+        <div className="bg-white rounded-3xl border border-neutral-200/85 shadow-md overflow-hidden p-5 sm:p-6 space-y-4">
           
-          {/* TITLE HEADER */}
-          <div className="text-center pb-1">
-            <h2 className="text-lg sm:text-xl font-display font-black text-neutral-900 tracking-tight flex items-center justify-center gap-2">
-              <span>🎁</span> VOCÊ RECEBERÁ HOJE:
-            </h2>
-          </div>
-
-          {/* LARGE MAIN PREMIUM BUNDLE SHOWCASE */}
-          <div className="relative group/offerMockup w-full flex items-center justify-center py-1">
-            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/10 to-teal-500/5 rounded-2xl blur opacity-75 group-hover/offerMockup:opacity-100 transition-all duration-300"></div>
-            <div className="relative bg-white border border-neutral-100 shadow-sm rounded-2xl overflow-hidden p-1.5 transition-all duration-350 max-w-[240px]">
-              <img
-                src={bundleMockup}
-                alt="Pacote Completo Cavaquinho e Banjo"
-                className="w-full object-contain mix-blend-multiply rounded-xl transition-transform hover:scale-[1.02]"
-                referrerPolicy="no-referrer"
-              />
-            </div>
-          </div>
-
-          {/* COMPACT UNIFIED CHECKLIST */}
-          <div className="bg-[#FAFAFA] border border-neutral-150 rounded-2xl p-3.5 space-y-3">
+          {/* COMPACT BUNDLE LIST */}
+          <div className="space-y-2.5">
             {items.map((item, idx) => (
-              <div key={idx} className="flex items-start gap-2.5">
-                <div className="flex-shrink-0 mt-0.5">
-                  {item.isBonus ? (
-                    <span className="text-sm select-none">🎁</span>
-                  ) : (
-                    <div className="w-4.5 h-4.5 rounded-full bg-emerald-100 flex items-center justify-center text-[#22C55E]">
-                      <Check className="w-3 h-3 stroke-[3]" />
-                    </div>
-                  )}
+              <div key={idx} className="flex items-center justify-between gap-3 text-left">
+                <div className="flex items-center gap-2.5 min-w-0">
+                  <div className="flex-shrink-0">
+                    {item.isBonus ? (
+                      <span className="text-sm select-none">🎁</span>
+                    ) : (
+                      <div className="w-4.5 h-4.5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 border border-emerald-100">
+                        <Check className="w-3 h-3 stroke-[3]" />
+                      </div>
+                    )}
+                  </div>
+                  <span className="text-xs sm:text-[13px] font-semibold text-neutral-800 tracking-tight truncate leading-tight">
+                    {item.text}
+                  </span>
                 </div>
-                <div className="flex flex-wrap items-center gap-1.5 text-xs sm:text-sm text-neutral-800 font-extrabold leading-tight">
-                  <span className="tracking-tight">{item.text}</span>
-                  {item.isBonus && (
-                    <span className="inline-flex items-center px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-700 text-[8px] font-black uppercase tracking-wider select-none">
-                      BÔNUS
-                    </span>
-                  )}
-                </div>
+                
+                {item.badge && (
+                  <span className="flex-shrink-0 inline-block px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-emerald-600 text-[8px] sm:text-[9px] font-black uppercase tracking-wider select-none leading-none">
+                    {item.badge}
+                  </span>
+                )}
               </div>
             ))}
           </div>
 
-          {/* CAIXA DE VALOR DESTACADA COMPACTA */}
-          <div className="p-4 bg-gradient-to-br from-[#FAFAFA] to-white border border-emerald-500/20 rounded-2xl text-center space-y-1.5 relative overflow-hidden shadow-sm">
-            <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/5 rounded-full blur-xl pointer-events-none"></div>
+          {/* DISCRETE ACCENTED DIVIDER */}
+          <div className="border-t border-neutral-100 my-1"></div>
+
+          {/* PREMIUM AMBER/GOLD SUPPORT BOX */}
+          <div className="bg-gradient-to-br from-amber-50/50 via-amber-50/20 to-transparent border border-amber-200/50 rounded-2xl p-3.5 space-y-1 relative overflow-hidden transition-all duration-200 hover:border-amber-300">
+            <div className="absolute -top-6 -right-6 w-12 h-12 bg-amber-400/5 rounded-full blur-xl pointer-events-none"></div>
             
-            <p className="text-xs font-extrabold text-neutral-500 flex items-center justify-center gap-1">
-              💰 Valor Total: <span className="line-through text-neutral-400">R$ 97,00</span>
+            <div className="flex items-center gap-2 text-amber-900">
+              <Star className="w-4 h-4 text-amber-500 fill-amber-400" />
+              <span className="text-xs sm:text-[13px] font-black uppercase tracking-wider">
+                SUPORTE EXCLUSIVO PARA ALUNOS
+              </span>
+              <span className="ml-auto inline-block text-[8px] font-black bg-amber-500 text-white px-1.5 py-0.5 rounded-full leading-none tracking-widest">
+                VIP
+              </span>
+            </div>
+            <p className="text-[10.5px] sm:text-xs text-neutral-600 font-medium leading-relaxed">
+              Tire dúvidas e receba orientação durante sua evolução no cavaquinho e banjo.
             </p>
+          </div>
+
+          {/* DISCRETE ACCENTED DIVIDER */}
+          <div className="border-t border-neutral-100 my-1"></div>
+
+          {/* HIGH CONVERTING PRICE SECTION */}
+          <div className="text-center space-y-2">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-amber-500/10 border border-amber-500/15 rounded-full text-[9px] font-black text-amber-800 uppercase tracking-widest leading-none">
+              🔥 OFERTA PROMOCIONAL
+            </div>
 
             <div className="space-y-0.5">
-              <p className="text-[10px] text-emerald-700 font-black uppercase tracking-widest leading-none">por apenas</p>
+              <p className="text-xs text-neutral-400 font-bold">
+                De <span className="line-through">R$ 97,00</span> por apenas
+              </p>
+              
               <div className="flex items-baseline justify-center gap-0.5">
-                <span className="text-lg font-extrabold text-[#22C55E] self-start mt-0.5">R$</span>
-                <span className="text-4xl font-display font-black text-neutral-900 tracking-tight">27,00</span>
+                <span className="text-xl font-extrabold text-emerald-500 self-start mt-1">R$</span>
+                <span className="text-5xl font-display font-black text-neutral-950 tracking-tight leading-none drop-shadow-sm">
+                  27,00
+                </span>
               </div>
             </div>
 
-            <div className="text-[10px] font-black text-emerald-750 bg-emerald-50 border border-emerald-100 inline-block px-2.5 py-1 rounded-md uppercase tracking-wider">
-              🔥 Economize R$ 70,00 Hoje
+            {/* THREE PREMIUM CORE TRUST PILL HIGHLIGHTS */}
+            <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 pt-1 text-[10px] text-neutral-600 font-bold">
+              <div className="flex items-center gap-1">
+                <Zap className="w-3.5 h-3.5 text-emerald-500 fill-emerald-100" />
+                <span>Acesso imediato</span>
+              </div>
+              <div className="w-1 h-1 rounded-full bg-neutral-300 hidden sm:block"></div>
+              <div className="flex items-center gap-1">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-500 fill-emerald-50" />
+                <span>Atualizações inclusas</span>
+              </div>
+              <div className="w-1 h-1 rounded-full bg-neutral-300 hidden sm:block"></div>
+              <div className="flex items-center gap-1">
+                <Shield className="w-3.5 h-3.5 text-emerald-500" />
+                <span>Garantia de 7 dias</span>
+              </div>
             </div>
           </div>
 
-          {/* BOTÃO CTA PRINCIPAL */}
-          <div className="space-y-3 pt-1">
+          {/* ACTION BUTTON */}
+          <div className="pt-2">
             <a
               href="https://pay.wiapy.com/3YueGcEdrf"
-              className="w-full py-4 px-4 bg-emerald-500 hover:bg-emerald-600 text-white font-black rounded-2xl text-center shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 hover:scale-[1.02] active:scale-[0.985] transition-all duration-200 cursor-pointer text-xs sm:text-sm uppercase tracking-wider block leading-tight border border-emerald-400"
+              className="w-full py-4 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black rounded-2xl text-center shadow-md shadow-emerald-500/15 hover:shadow-emerald-500/25 transition-all duration-200 cursor-pointer text-xs sm:text-sm uppercase tracking-wider block leading-tight border border-emerald-400/20"
             >
-              🚀 QUERO APRENDER CAVAQUINHO E BANJO AGORA
+              🎸 QUERO COMEÇAR A TOCAR HOJE
             </a>
-
-            {/* ELEMENTOS DE CONFIANÇA INTEGRADOS DIRETAMENTE (COMPACT) */}
-            <div className="grid grid-cols-3 gap-1 pt-1.5 text-center text-[9px] font-extrabold text-neutral-500 uppercase tracking-wider border-t border-b border-neutral-100 py-2.5">
-              <div className="flex flex-col items-center gap-1 justify-center">
-                <Lock className="w-3.5 h-3.5 text-[#22C55E]" />
-                <span className="leading-tight">Compra 100% Segura</span>
-              </div>
-              <div className="flex flex-col items-center gap-1 justify-center border-l border-r border-neutral-150">
-                <Zap className="w-3.5 h-3.5 text-[#22C55E] fill-current" />
-                <span className="leading-tight">Acesso Imediato</span>
-              </div>
-              <div className="flex flex-col items-center gap-1 justify-center">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#22C55E]" />
-                <span className="leading-tight">Garantia de 7 Dias</span>
-              </div>
-            </div>
             
-            <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide">
-              Pagamento único • Sem mensalidades ou taxas ocultas • Segurança criptografada
+            <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-3 uppercase">
+              🔒 Pagamento seguro • Sem cobranças adicionais
             </p>
           </div>
 
