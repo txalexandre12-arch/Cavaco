@@ -115,7 +115,7 @@ export default function SupportModal({ isOpen, onClose }: SupportModalProps) {
             {/* Chat Body background with standard WhatsApp tiling color */}
             <div className="flex-1 bg-[#ECE5DD] p-4 overflow-y-auto space-y-4 relative pattern-grid">
               <div className="mx-auto max-w-[280px] bg-white/70 backdrop-blur-xs text-[11px] text-neutral-600 text-center py-1.5 px-3 rounded-lg shadow-xs mb-3 border border-neutral-200">
-                🔒 Suporte oficial do guia. Tire suas dúvidas sobre o cronograma de 15 dias.
+                🔒 Suporte oficial do guia. Tire suas dúvidas sobre o cronograma de 30 dias.
               </div>
 
               {messages.map((m) => (

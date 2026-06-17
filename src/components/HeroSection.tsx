@@ -11,7 +11,7 @@ export default function HeroSection() {
         
         {/* Core Headline with supreme display typography */}
         <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-tight sm:leading-[1.1]">
-          Toque Cavaquinho e Banjo em <span className="text-gold">Até 15 Dias</span>
+          Toque Cavaquinho e Banjo em <span className="text-gold">Até 30 Dias</span>
         </h1>
 
         {/* Elegant clean subheadline */}

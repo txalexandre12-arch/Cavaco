@@ -1,6 +1,6 @@
 {
-  "name": "Cavaquinho em 15 Dias",
-  "description": "Página de vendas premium e de alta conversão para o e-book Toque Cavaquinho e Banjo em Até 15 Dias.",
+  "name": "Cavaquinho em 30 Dias",
+  "description": "Página de vendas premium e de alta conversão para o e-book Toque Cavaquinho e Banjo em Até 30 Dias.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
