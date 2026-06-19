@@ -2,25 +2,25 @@ import React from "react";
 
 export default function HeroSection() {
   return (
-    <section id="hero-section" className="relative py-24 sm:py-32 bg-white overflow-hidden px-4 sm:px-6">
+    <section id="hero-section" className="relative pt-12 pb-24 sm:pt-16 sm:pb-32 bg-white overflow-hidden px-4 sm:px-6">
       
       {/* Soft elegant golden blur accent */}
       <div className="absolute top-1/2 left-1/2 w-[350px] h-[350px] bg-gold-bg/35 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2 opacity-70"></div>
 
-      <div className="max-w-3xl mx-auto relative z-10 text-center space-y-8 select-none">
+      <div className="max-w-3xl mx-auto relative z-10 text-center select-none">
         
         {/* Core Headline with supreme display typography */}
-        <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-tight sm:leading-[1.1]">
-          Toque Cavaquinho e Banjo em <span className="text-gold">Até 30 Dias</span>
+        <h1 className="text-4xl sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-tight sm:leading-[1.1] uppercase mb-4">
+          TOQUE SEU PRIMEIRO PAGODE EM <span className="text-gold">ATÉ 30 DIAS</span>
         </h1>
 
         {/* Elegant clean subheadline */}
-        <p className="text-neutral-600 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto font-light">
-          Aprenda os acordes, batidas e músicas essenciais para tocar pagode e samba mesmo começando do absoluto zero.
+        <p className="text-neutral-600 text-lg sm:text-xl leading-relaxed max-w-2xl mx-auto font-light mb-6">
+          Aprenda do zero através de um método simples e prático, desenvolvido para quem nunca tocou cavaquinho ou banjo antes.
         </p>
 
         {/* Mockup do material */}
-        <div className="flex justify-center max-w-2xl mx-auto py-2">
+        <div className="flex justify-center w-[80%] sm:w-[50%] max-w-lg mx-auto py-2 mb-8">
           <img
             src="/mockup.png"
             alt="Mockup do material Cavaquinho na Prática"
@@ -30,7 +30,7 @@ export default function HeroSection() {
         </div>
 
         {/* Centered CTA - High Contrast Clean Button without side clutter */}
-        <div className="pt-2 flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center mb-8">
           <button
             onClick={() => {
               const offerSec = document.getElementById("offer-section");

@@ -117,7 +117,7 @@ export default function OfferSection() {
               <div className="flex items-baseline justify-center gap-0.5">
                 <span className="text-xl font-extrabold text-emerald-500 self-start mt-1">R$</span>
                 <span className="text-5xl font-display font-black text-neutral-950 tracking-tight leading-none drop-shadow-sm">
-                  27,00
+                  19,00
                 </span>
               </div>
             </div>
