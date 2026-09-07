@@ -5,14 +5,8 @@ export default function OQueVaiReceberSection() {
   const deliverables = [
     {
       icon: Music,
-      title: "GUIA COMPLETO DE CAVAQUINHO",
-      description: "Aprenda do absoluto zero até tocar suas primeiras músicas com postura correta, acordes, ritmos e exercícios práticos.",
-      badge: null,
-    },
-    {
-      icon: Music,
-      title: "GUIA COMPLETO DE BANJO",
-      description: "Domine a mecânica correta do banjo e desenvolva o som clássico e marcante utilizado nas rodas de samba e pagode.",
+      title: "MÉTODO BANJO NA RODA",
+      description: "Aprenda passo a passo acordes, palhetadas, levadas e repicadas para começar a tocar samba e pagode, mesmo partindo do zero.",
       badge: null,
     },
     {
@@ -56,10 +50,10 @@ export default function OQueVaiReceberSection() {
             <span>🎁 TUDO O QUE VOCÊ LEVA</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-display font-black text-neutral-900 tracking-tight leading-tight">
-            🎁 Tudo o Que Você Vai Receber
+            🎁 Tudo o Que Você Recebe Hoje
           </h2>
           <p className="text-neutral-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Um compilado completo e organizado para acelerar sua evolução no cavaquinho e no banjo, mesmo que você esteja começando do zero.
+            Um passo a passo completo para aprender, praticar e evoluir no banjo.
           </p>
         </div>
 
@@ -70,13 +64,15 @@ export default function OQueVaiReceberSection() {
             return (
               <div
                 key={idx}
-                className="bg-white rounded-3xl border border-neutral-200/70 p-6 sm:p-7 shadow-sm hover:shadow-xl hover:border-emerald-500/40 hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between group relative"
+                className={`bg-white rounded-3xl border border-neutral-200/70 p-6 sm:p-7 shadow-sm flex flex-col justify-between relative ${
+                  idx === 0 ? "md:col-span-2" : ""
+                }`}
               >
                 <div className="space-y-4">
                   {/* Header with Icon and Badge */}
                   <div className="flex items-center justify-between gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 group-hover:bg-emerald-500 group-hover:text-white group-hover:border-emerald-500 transition-all duration-300">
-                      <IconComponent className="w-5 h-5 transition-colors duration-300" />
+                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
+                      <IconComponent className="w-5 h-5" />
                     </div>
                     
                     {item.badge && (
@@ -88,7 +84,7 @@ export default function OQueVaiReceberSection() {
 
                   {/* Content */}
                   <div className="space-y-1.5">
-                    <h3 className="text-sm sm:text-base font-black text-neutral-900 tracking-tight group-hover:text-emerald-700 transition-colors duration-200">
+                    <h3 className="text-sm sm:text-base font-black text-neutral-900 tracking-tight">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed font-semibold">
@@ -102,7 +98,7 @@ export default function OQueVaiReceberSection() {
         </div>
 
         {/* Highlighting Box - You still receive 4 exclusive bonuses */}
-        <div className="max-w-2xl mx-auto bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent border border-emerald-500/20 rounded-2xl p-4.5 sm:p-5 flex items-center gap-4 shadow-sm relative overflow-hidden transition-all duration-300 hover:border-emerald-500/35">
+        <div className="max-w-2xl mx-auto bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent border border-emerald-500/20 rounded-2xl p-4.5 sm:p-5 flex items-center gap-4 shadow-sm relative overflow-hidden">
           <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl pointer-events-none"></div>
           
           <div className="w-11 h-11 rounded-xl bg-emerald-500 flex items-center justify-center text-white flex-shrink-0 shadow-md">

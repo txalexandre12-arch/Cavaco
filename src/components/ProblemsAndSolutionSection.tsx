@@ -70,7 +70,7 @@ export default function ProblemsAndSolutionSection() {
             {painPoints.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between transition-all duration-200 hover:border-rose-200 hover:bg-rose-50/20 group"
+                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between"
               >
                 <div className="space-y-3.5">
                   <div className="flex items-center justify-between">
@@ -122,7 +122,7 @@ export default function ProblemsAndSolutionSection() {
             {solutionPoints.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between transition-all duration-200 hover:border-emerald-200 hover:bg-emerald-50/10 group"
+                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between"
               >
                 <div className="space-y-3.5">
                   <div className="flex items-center justify-between">

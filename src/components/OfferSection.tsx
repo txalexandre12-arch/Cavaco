@@ -4,30 +4,26 @@ import { Check, Shield, Zap, Star, Sparkles, Award } from "lucide-react";
 export default function OfferSection() {
   const items = [
     {
-      isBonus: false,
-      text: "Guia Completo de Cavaquinho",
+      icon: "🪕",
+      text: "Método Banjo na Roda",
     },
     {
-      isBonus: false,
-      text: "Guia Completo de Banjo",
-    },
-    {
-      isBonus: true,
-      text: "+300 Cifras de Pagode Organizadas",
+      icon: "🎁",
+      text: "+300 Cifras de Samba e Pagode",
       badge: "BÔNUS",
     },
     {
-      isBonus: true,
-      text: "Dicionário Completo de Acordes",
+      icon: "🎁",
+      text: "Dicionário Visual de Acordes",
       badge: "BÔNUS",
     },
     {
-      isBonus: true,
-      text: "Cronograma de Treino para Iniciantes",
+      icon: "🎁",
+      text: "Cronograma de Treino — 30 Dias",
       badge: "BÔNUS",
     },
     {
-      isBonus: true,
+      icon: "🎁",
       text: "Atualizações Futuras Gratuitas",
       badge: "BÔNUS",
     },
@@ -57,15 +53,9 @@ export default function OfferSection() {
               <div key={idx} className="flex items-center justify-between gap-3 text-left">
                 <div className="flex items-center gap-2.5 min-w-0">
                   <div className="flex-shrink-0">
-                    {item.isBonus ? (
-                      <span className="text-sm select-none">🎁</span>
-                    ) : (
-                      <div className="w-4.5 h-4.5 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-500 border border-emerald-100">
-                        <Check className="w-3 h-3 stroke-[3]" />
-                      </div>
-                    )}
+                    <span className="text-sm select-none">{item.icon}</span>
                   </div>
-                  <span className="text-xs sm:text-[13px] font-semibold text-neutral-800 tracking-tight truncate leading-tight">
+                  <span className="text-xs sm:text-[13px] font-semibold text-neutral-800 tracking-tight leading-snug">
                     {item.text}
                   </span>
                 </div>
@@ -83,7 +73,7 @@ export default function OfferSection() {
           <div className="border-t border-neutral-100 my-1"></div>
 
           {/* PREMIUM AMBER/GOLD SUPPORT BOX */}
-          <div className="bg-gradient-to-br from-amber-50/50 via-amber-50/20 to-transparent border border-amber-200/50 rounded-2xl p-3.5 space-y-1 relative overflow-hidden transition-all duration-200 hover:border-amber-300">
+          <div className="bg-gradient-to-br from-amber-50/50 via-amber-50/20 to-transparent border border-amber-200/50 rounded-2xl p-3.5 space-y-1 relative overflow-hidden">
             <div className="absolute -top-6 -right-6 w-12 h-12 bg-amber-400/5 rounded-full blur-xl pointer-events-none"></div>
             
             <div className="flex items-center gap-2 text-amber-900">
@@ -96,7 +86,7 @@ export default function OfferSection() {
               </span>
             </div>
             <p className="text-[10.5px] sm:text-xs text-neutral-600 font-medium leading-relaxed">
-              Tire dúvidas e receba orientação durante sua evolução no cavaquinho e banjo.
+              Tire suas dúvidas e receba orientações durante sua evolução no banjo.
             </p>
           </div>
 
@@ -147,7 +137,7 @@ export default function OfferSection() {
               href="https://pay.wiapy.com/3YueGcEdrf"
               className="w-full py-4 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black rounded-2xl text-center shadow-md shadow-emerald-500/15 hover:shadow-emerald-500/25 transition-all duration-200 cursor-pointer text-xs sm:text-sm uppercase tracking-wider block leading-tight border border-emerald-400/20"
             >
-              🎸 QUERO COMEÇAR A TOCAR HOJE
+              🪕 QUERO COMEÇAR NO BANJO
             </a>
             
             <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-3 uppercase">

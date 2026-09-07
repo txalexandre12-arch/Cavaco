@@ -64,7 +64,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-neutral-900 pb-8">
             <div className="text-center md:text-left">
               <h3 className="text-white font-display font-extrabold text-sm uppercase tracking-wider">
-                🎸 CAVAQUINHO NA PRÁTICA
+                🪕 BANJO EM ATÉ 30 DIAS
               </h3>
               <p className="text-[11px] text-neutral-550 mt-1 select-none">
                 O caminho mais prático e rápido para aprender do absoluto zero.
@@ -89,7 +89,7 @@ export default function App() {
             </div>
 
             <p className="text-[11px] text-neutral-600 text-center md:text-right">
-              &copy; {new Date().getFullYear()} Cavaquinho na Prática. Todos os direitos reservados.
+              &copy; {new Date().getFullYear()} Banjo em até 30 dias. Todos os direitos reservados.
             </p>
           </div>
 

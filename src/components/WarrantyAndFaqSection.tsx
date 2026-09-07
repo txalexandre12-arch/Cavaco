@@ -149,7 +149,7 @@ export default function WarrantyAndFaqSection() {
               return (
                 <div 
                   key={index}
-                  className="border border-neutral-900 rounded-xl bg-neutral-900/30 overflow-hidden transition-all duration-200 hover:border-neutral-800"
+                  className="border border-neutral-900 rounded-xl bg-neutral-900/30 overflow-hidden"
                 >
                   <button
                     onClick={() => toggleFaq(index)}
