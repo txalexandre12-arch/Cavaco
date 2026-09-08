@@ -107,7 +107,7 @@ export default function OfferSection() {
               <div className="flex items-baseline justify-center gap-0.5">
                 <span className="text-xl font-extrabold text-emerald-500 self-start mt-1">R$</span>
                 <span className="text-5xl font-display font-black text-neutral-950 tracking-tight leading-none drop-shadow-sm">
-                  19,00
+                  17,00
                 </span>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function OfferSection() {
           {/* ACTION BUTTON */}
           <div className="pt-2">
             <a
-              href="https://pay.wiapy.com/3YueGcEdrf"
+              href="https://app.zuptos.com.br/checkout/535b80d2dbb7c148"
               className="w-full py-4 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black rounded-2xl text-center shadow-md shadow-emerald-500/15 hover:shadow-emerald-500/25 transition-all duration-200 cursor-pointer text-xs sm:text-sm uppercase tracking-wider block leading-tight border border-emerald-400/20"
             >
               🪕 QUERO COMEÇAR NO BANJO
