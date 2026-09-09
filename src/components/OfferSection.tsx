@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { Check, Star } from "lucide-react";
-import SpecialOfferModal from "./SpecialOfferModal";
+
+const SpecialOfferModal = lazy(() => import("./SpecialOfferModal"));
 
 export default function OfferSection() {
   const [isSpecialOfferOpen, setIsSpecialOfferOpen] = useState(false);
@@ -70,9 +71,12 @@ export default function OfferSection() {
               {/* Mockup do Plano Básico */}
               <div className="py-2 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
                 <img
-                  src="/mockup3.png"
+                  src="/mockup3.webp"
                   alt="Mockup do Plano Básico"
+                  width={280}
+                  height={287}
                   loading="lazy"
+                  decoding="async"
                   className="w-auto h-[220px] sm:h-[260px] md:h-[280px] max-w-full object-contain filter drop-shadow-md select-none"
                   referrerPolicy="no-referrer"
                 />
@@ -177,9 +181,12 @@ export default function OfferSection() {
               {/* Mockup Completo Recheado de Materiais */}
               <div className="py-2 flex items-center justify-center min-h-[220px] sm:min-h-[260px]">
                 <img
-                  src="/mockup2.png"
+                  src="/mockup2.webp"
                   alt="Mockup do Plano Completo com todos os materiais e bônus"
+                  width={310}
+                  height={258}
                   loading="lazy"
+                  decoding="async"
                   className="w-auto h-[240px] sm:h-[280px] md:h-[310px] max-w-full object-contain filter drop-shadow-xl select-none"
                   referrerPolicy="no-referrer"
                 />
@@ -281,10 +288,14 @@ export default function OfferSection() {
       </div>
 
       {/* MODAL DE OFERTA ESPECIAL (DISPARADO AO CLICAR NO PLANO DE R$10) */}
-      <SpecialOfferModal
-        isOpen={isSpecialOfferOpen}
-        onClose={() => setIsSpecialOfferOpen(false)}
-      />
+      {isSpecialOfferOpen && (
+        <Suspense fallback={null}>
+          <SpecialOfferModal
+            isOpen={isSpecialOfferOpen}
+            onClose={() => setIsSpecialOfferOpen(false)}
+          />
+        </Suspense>
+      )}
     </section>
   );
 }

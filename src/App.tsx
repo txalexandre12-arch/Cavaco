@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense, lazy } from "react";
 import HeroSection from "./components/HeroSection";
 import InsidePreviewSection from "./components/InsidePreviewSection";
 import ProblemsAndSolutionSection from "./components/ProblemsAndSolutionSection";
@@ -6,8 +6,9 @@ import OQueVaiReceberSection from "./components/OQueVaiReceberSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import OfferSection from "./components/OfferSection";
 import WarrantyAndFaqSection from "./components/WarrantyAndFaqSection";
-import SupportModal from "./components/SupportModal";
 import { ShieldCheck, Lock } from "lucide-react";
+
+const SupportModal = lazy(() => import("./components/SupportModal"));
 
 export default function App() {
   const [supportOpen, setSupportOpen] = useState(false);
@@ -107,7 +108,11 @@ export default function App() {
 
 
       {/* SUPPORT DIALOG MODAL */}
-      <SupportModal isOpen={supportOpen} onClose={() => setSupportOpen(false)} />
+      {supportOpen && (
+        <Suspense fallback={null}>
+          <SupportModal isOpen={supportOpen} onClose={() => setSupportOpen(false)} />
+        </Suspense>
+      )}
 
     </div>
   );

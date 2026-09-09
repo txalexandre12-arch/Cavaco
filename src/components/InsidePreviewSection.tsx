@@ -8,16 +8,16 @@ interface PageItem {
 }
 
 const pages: PageItem[] = [
-  { id: 1, name: "PR1", src: "/pr1.png", alt: "Página do material Banjo na Roda - PR1" },
-  { id: 2, name: "PR2", src: "/pr2.png", alt: "Página do material Banjo na Roda - PR2" },
-  { id: 3, name: "PR3", src: "/pr3.png", alt: "Página do material Banjo na Roda - PR3" },
-  { id: 4, name: "PR4", src: "/pr4.png", alt: "Página do material Banjo na Roda - PR4" },
-  { id: 5, name: "PR5", src: "/pr5.png", alt: "Página do material Banjo na Roda - PR5" },
-  { id: 6, name: "PR6", src: "/pr6.png", alt: "Página do material Banjo na Roda - PR6" },
+  { id: 1, name: "PR1", src: "/pr1.webp", alt: "Página do material Banjo na Roda - PR1" },
+  { id: 2, name: "PR2", src: "/pr2.webp", alt: "Página do material Banjo na Roda - PR2" },
+  { id: 3, name: "PR3", src: "/pr3.webp", alt: "Página do material Banjo na Roda - PR3" },
+  { id: 4, name: "PR4", src: "/pr4.webp", alt: "Página do material Banjo na Roda - PR4" },
+  { id: 5, name: "PR5", src: "/pr5.webp", alt: "Página do material Banjo na Roda - PR5" },
+  { id: 6, name: "PR6", src: "/pr6.webp", alt: "Página do material Banjo na Roda - PR6" },
 ];
 
-// Duplicamos o conjunto internamente para garantir largura suficiente e loop contínuo 100% imperceptível
-const trackItems = [...pages, ...pages];
+// O conjunto de 6 itens para cada track garante loop 100% contínuo e metade de nós no DOM
+const trackItems = pages;
 
 export default function InsidePreviewSection() {
   return (
@@ -73,7 +73,10 @@ export default function InsidePreviewSection() {
                     <img
                       src={page.src}
                       alt={page.alt}
+                      width={275}
+                      height={412}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain rounded-xl select-none pointer-events-none"
                       referrerPolicy="no-referrer"
                     />
@@ -96,7 +99,10 @@ export default function InsidePreviewSection() {
                     <img
                       src={page.src}
                       alt={page.alt}
+                      width={275}
+                      height={412}
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-contain rounded-xl select-none pointer-events-none"
                       referrerPolicy="no-referrer"
                     />

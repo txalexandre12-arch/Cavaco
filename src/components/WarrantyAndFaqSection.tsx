@@ -70,8 +70,12 @@ export default function WarrantyAndFaqSection() {
               className="relative max-w-[200px]"
             >
               <img
-                src="/Selo.png"
+                src="/Selo.webp"
                 alt="Selo de Garantia de 7 Dias"
+                width={200}
+                height={200}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-auto drop-shadow-2xl"
                 referrerPolicy="no-referrer"
               />

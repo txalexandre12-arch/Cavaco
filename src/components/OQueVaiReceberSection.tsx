@@ -79,11 +79,14 @@ export default function OQueVaiReceberSection() {
 
           {/* MOCKUP PROPORCIONAL E CENTRALIZADO (MAX 580PX, 85% NO DESKTOP) */}
           <div className="relative mx-auto py-1 sm:py-2 flex justify-center">
-            <div className="w-full sm:w-[85%] max-w-[580px] flex items-center justify-center">
+            <div className="w-full sm:w-[85%] max-w-[580px] flex items-center justify-center aspect-[1375/1144]">
               <img
-                src="/mockup2.png"
+                src="/mockup2.webp"
                 alt="Mockup do Método Banjo na Roda e todos os materiais bônus inclusos"
+                width={580}
+                height={483}
                 loading="lazy"
+                decoding="async"
                 className="w-full h-auto object-contain filter drop-shadow-2xl select-none"
                 referrerPolicy="no-referrer"
               />

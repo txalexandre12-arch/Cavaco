@@ -22,14 +22,33 @@ export default function HeroSection() {
           Um método passo a passo para aprender acordes, palhetadas, levadas e repicadas — mesmo que você nunca tenha tocado antes.
         </p>
 
-        {/* Mockup do material */}
+        {/* Mockup do material - LCP otimizado com picture, dimensões explícitas para zero CLS e fetchPriority high */}
         <div className="flex justify-center w-[88%] sm:w-[60%] max-w-[600px] mx-auto py-1 sm:py-2 mb-[32px] sm:mb-8">
-          <img
-            src="/mockup.png"
-            alt="Mockup do material Banjo na Prática"
-            className="w-full h-auto drop-shadow-2xl"
-            referrerPolicy="no-referrer"
-          />
+          <picture className="w-full">
+            <source
+              media="(max-width: 640px)"
+              srcSet="/mockup-mobile.webp"
+              type="image/webp"
+              width={640}
+              height={427}
+            />
+            <source
+              srcSet="/mockup.webp"
+              type="image/webp"
+              width={1000}
+              height={667}
+            />
+            <img
+              src="/mockup.webp"
+              alt="Mockup do material Banjo na Prática"
+              width={600}
+              height={400}
+              fetchPriority="high"
+              decoding="async"
+              className="w-full h-auto aspect-[3/2] object-contain drop-shadow-2xl"
+              referrerPolicy="no-referrer"
+            />
+          </picture>
         </div>
 
         {/* Centered CTA - High Contrast Clean Button without side clutter */}

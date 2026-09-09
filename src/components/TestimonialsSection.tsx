@@ -4,9 +4,9 @@ import { motion, AnimatePresence } from "motion/react";
 
 export default function TestimonialsSection() {
   const testimonialImages = [
-    { src: "/depoi1.png", alt: "Depoimento de Aluno 1" },
-    { src: "/depoi2.png", alt: "Depoimento de Aluno 2" },
-    { src: "/depoi3.png", alt: "Depoimento de Aluno 3" },
+    { src: "/depoi1.webp", alt: "Depoimento de Aluno 1" },
+    { src: "/depoi2.webp", alt: "Depoimento de Aluno 2" },
+    { src: "/depoi3.webp", alt: "Depoimento de Aluno 3" },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -58,6 +58,10 @@ export default function TestimonialsSection() {
                   <img
                     src={testimonialImages[activeIndex].src}
                     alt={testimonialImages[activeIndex].alt}
+                    width={450}
+                    height={450}
+                    loading="lazy"
+                    decoding="async"
                     className="max-h-[380px] sm:max-h-[450px] w-auto h-auto object-contain rounded-xl"
                     referrerPolicy="no-referrer"
                   />
