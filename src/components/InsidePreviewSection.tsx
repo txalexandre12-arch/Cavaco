@@ -25,24 +25,6 @@ export default function InsidePreviewSection() {
       id="preview-section"
       className="py-10 sm:py-14 bg-[#FAF9F6] border-y border-neutral-150/70 overflow-hidden select-none"
     >
-      {/* Estilos de animação contínua linear sem pausa no hover */}
-      <style>{`
-        @keyframes marqueeContinuous {
-          0% {
-            transform: translate3d(0, 0, 0);
-          }
-          100% {
-            transform: translate3d(-50%, 0, 0);
-          }
-        }
-        .marquee-track-infinite {
-          display: flex;
-          width: max-content;
-          animation: marqueeContinuous 60s linear infinite !important;
-          will-change: transform;
-        }
-      `}</style>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* TÍTULO PRINCIPAL */}

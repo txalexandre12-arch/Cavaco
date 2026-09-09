@@ -43,9 +43,13 @@ export default function HeroSection() {
           <button
             onClick={() => {
               const offerSec = document.getElementById("offer-section");
-              if (offerSec) offerSec.scrollIntoView({ behavior: "smooth" });
+              if (offerSec) {
+                offerSec.scrollIntoView({ behavior: "smooth" });
+              } else {
+                window.dispatchEvent(new CustomEvent("load-and-scroll-offer"));
+              }
             }}
-            className="w-full sm:w-auto px-12 py-5.5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center cursor-pointer text-base sm:text-lg leading-none uppercase tracking-wider block"
+            className="w-full sm:w-auto px-12 py-5.5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-colors duration-200 flex items-center justify-center cursor-pointer text-base sm:text-lg leading-none uppercase tracking-wider block"
           >
             QUERO APRENDER AGORA
           </button>
