@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Check, Star } from "lucide-react";
+import SpecialOfferModal from "./SpecialOfferModal";
 
 export default function OfferSection() {
+  const [isSpecialOfferOpen, setIsSpecialOfferOpen] = useState(false);
+
   const completeBonusItems = [
     {
       icon: "🎁",
@@ -113,12 +116,13 @@ export default function OfferSection() {
 
               {/* Button */}
               <div>
-                <a
-                  href="https://app.zuptos.com.br/checkout/c2bc66213299a0e0"
+                <button
+                  type="button"
+                  onClick={() => setIsSpecialOfferOpen(true)}
                   className="w-full py-3.5 px-4 bg-neutral-900 hover:bg-neutral-800 text-white font-black rounded-2xl text-center shadow-sm text-xs sm:text-sm uppercase tracking-wider block leading-tight transition-colors cursor-pointer"
                 >
                   🪕 QUERO O PLANO SIMPLES
-                </a>
+                </button>
                 
                 <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-3 uppercase">
                   🔒 Pagamento seguro • Sem cobranças adicionais
@@ -217,7 +221,7 @@ export default function OfferSection() {
                   <div className="flex items-baseline justify-center gap-0.5">
                     <span className="text-xl font-extrabold text-emerald-500 self-start mt-1">R$</span>
                     <span className="text-5xl font-display font-black text-neutral-950 tracking-tight leading-none drop-shadow-sm">
-                      19,00
+                      27,00
                     </span>
                   </div>
                 </div>
@@ -225,7 +229,7 @@ export default function OfferSection() {
                 {/* COMPARISON PHRASE */}
                 <div className="bg-emerald-50 border border-emerald-200/80 rounded-xl px-3 py-1.5 text-center">
                   <p className="text-[11px] sm:text-xs font-bold text-emerald-800 leading-snug">
-                    Por apenas R$9 a mais, leve o treinamento completo + todos os bônus.
+                    Por apenas R$17 a mais, leve o treinamento completo + todos os bônus.
                   </p>
                 </div>
 
@@ -260,6 +264,12 @@ export default function OfferSection() {
         </div>
 
       </div>
+
+      {/* MODAL DE OFERTA ESPECIAL (DISPARADO AO CLICAR NO PLANO DE R$10) */}
+      <SpecialOfferModal
+        isOpen={isSpecialOfferOpen}
+        onClose={() => setIsSpecialOfferOpen(false)}
+      />
     </section>
   );
 }
