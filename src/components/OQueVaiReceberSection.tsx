@@ -1,118 +1,171 @@
 import React from "react";
-import { Music, BookOpen, Layers, Calendar, Sparkles, Gift } from "lucide-react";
+import { Check, Zap, Gift } from "lucide-react";
 
 export default function OQueVaiReceberSection() {
-  const deliverables = [
+  const coreFeatures = [
+    "Método Banjo na Roda completo",
+    "Acordes essenciais explicados de forma visual",
+    "Levadas de samba e pagode passo a passo",
+    "Repicadas e variações para deixar seu som mais completo",
+    "Exercícios práticos para desenvolver coordenação e agilidade",
+    "Progressões harmônicas para entender melhor as músicas",
+    "Como tocar e se comportar em uma roda de samba",
+    "Conteúdo pensado para quem está começando do zero",
+  ];
+
+  const bonuses = [
     {
-      icon: Music,
-      title: "MÉTODO BANJO NA RODA",
-      description: "Aprenda passo a passo acordes, palhetadas, levadas e repicadas para começar a tocar samba e pagode, mesmo partindo do zero.",
-      badge: null,
+      number: "1",
+      title: "+300 Cifras de Pagode Organizadas",
+      description: "Tenha um repertório completo para praticar e tocar suas músicas favoritas.",
     },
     {
-      icon: BookOpen,
-      title: "+300 CIFRAS DE PAGODE ORGANIZADAS",
-      description: "Tenha acesso a um repertório completo com músicas organizadas e simplificadas para facilitar seu aprendizado.",
-      badge: "BÔNUS",
+      number: "2",
+      title: "Dicionário de Acordes",
+      description: "Consulte rapidamente os principais acordes sempre que precisar.",
     },
     {
-      icon: Layers,
-      title: "DICIONÁRIO DE ACORDES",
-      description: "Consulte rapidamente acordes essenciais para cavaquinho e banjo através de um material visual e fácil de usar.",
-      badge: "BÔNUS",
+      number: "3",
+      title: "Cronograma de Treino para Iniciantes",
+      description: "Saiba exatamente o que praticar para evoluir sem ficar perdido.",
     },
     {
-      icon: Calendar,
-      title: "CRONOGRAMA DE TREINO PARA INICIANTES",
-      description: "Saiba exatamente o que praticar todos os dias para evoluir sem ficar perdido.",
-      badge: "BÔNUS",
-    },
-    {
-      icon: Sparkles,
-      title: "ATUALIZAÇÕES FUTURAS",
-      description: "Receba gratuitamente todas as futuras melhorias e novos materiais adicionados ao treinamento.",
-      badge: "BÔNUS",
+      number: "4",
+      title: "Atualizações Futuras",
+      description: "Receba gratuitamente novos conteúdos e melhorias adicionadas ao método.",
     },
   ];
 
-  return (
-    <section id="receive-section" className="py-20 bg-neutral-50/50 px-4 border-t border-b border-neutral-100 relative overflow-hidden select-none">
-      
-      {/* Decorative ambient background glows */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-500/5 rounded-full blur-3xl pointer-events-none"></div>
+  const scrollToOffer = () => {
+    const offerSec = document.getElementById("offer-section");
+    if (offerSec) {
+      offerSec.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-      <div className="max-w-5xl mx-auto relative z-10 space-y-12">
+  return (
+    <section
+      id="receive-section"
+      className="py-[55px] bg-[#F8F7F4] border-t border-b border-neutral-200/80 relative overflow-hidden select-none"
+    >
+      {/* Luzes decorativas sutis de fundo */}
+      <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative z-10">
         
-        {/* Premium Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs font-black uppercase tracking-wider">
-            <span>🎁 TUDO O QUE VOCÊ LEVA</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-display font-black text-neutral-900 tracking-tight leading-tight">
-            🎁 Tudo o Que Você Recebe Hoje
+        {/* 1. HEADLINE PRINCIPAL REDUZIDA (DUAS LINHAS NO DESKTOP, COMPACTA) */}
+        <div className="max-w-[900px] mx-auto text-center px-4 mb-[35px]">
+          <h2 className="text-[30px] sm:text-[42px] leading-[1.08] sm:leading-[1.05] font-display font-extrabold text-neutral-900 tracking-tight uppercase">
+            <span className="sm:block">TUDO O QUE VOCÊ VAI RECEBER AO ACESSAR O</span>{" "}
+            <span className="text-gold sm:block">MÉTODO BANJO NA RODA</span>
           </h2>
-          <p className="text-neutral-500 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Um passo a passo completo para aprender, praticar e evoluir no banjo.
-          </p>
         </div>
 
-        {/* Deliverables Grid - 2 columns in desktop, 1 in mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {deliverables.map((item, idx) => {
-            const IconComponent = item.icon;
-            return (
-              <div
-                key={idx}
-                className={`bg-white rounded-3xl border border-neutral-200/70 p-6 sm:p-7 shadow-sm flex flex-col justify-between relative ${
-                  idx === 0 ? "md:col-span-2" : ""
-                }`}
-              >
-                <div className="space-y-4">
-                  {/* Header with Icon and Badge */}
-                  <div className="flex items-center justify-between gap-4">
-                    <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600">
-                      <IconComponent className="w-5 h-5" />
-                    </div>
-                    
-                    {item.badge && (
-                      <span className="inline-flex items-center px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[9px] font-black uppercase tracking-wider select-none leading-none shadow-sm">
-                        {item.badge}
-                      </span>
-                    )}
-                  </div>
+        {/* 2. GRANDE CARD CENTRAL MAIS COMPACTO (MAX 760PX) */}
+        <div className="w-[calc(100%-24px)] sm:w-[calc(100%-32px)] max-w-[760px] mx-auto bg-white rounded-3xl sm:rounded-[32px] border border-neutral-200/90 shadow-xl shadow-neutral-950/[0.04] px-[18px] py-[28px] sm:px-[35px] sm:py-[40px] space-y-6 sm:space-y-7">
+          
+          {/* TOPO DO CARD: BADGE E HEADLINES COMPACTAS */}
+          <div className="text-center space-y-2 sm:space-y-2.5 max-w-[620px] mx-auto">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200/80 text-emerald-700 text-xs font-black uppercase tracking-wider shadow-xs">
+              <Zap className="w-3.5 h-3.5 fill-emerald-600 text-emerald-600" />
+              <span>⚡ ACESSO IMEDIATO</span>
+            </div>
 
-                  {/* Content */}
-                  <div className="space-y-1.5">
-                    <h3 className="text-sm sm:text-base font-black text-neutral-900 tracking-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed font-semibold">
-                      {item.description}
-                    </p>
+            <h3 className="text-[21px] sm:text-[27px] leading-[1.18] sm:leading-[1.15] font-display font-black text-neutral-950 tracking-tight">
+              Tudo foi organizado para você sair do zero e começar a tocar de verdade.
+            </h3>
+          </div>
+
+          {/* MOCKUP PROPORCIONAL E CENTRALIZADO (MAX 580PX, 85% NO DESKTOP) */}
+          <div className="relative mx-auto py-1 sm:py-2 flex justify-center">
+            <div className="w-full sm:w-[85%] max-w-[580px] flex items-center justify-center">
+              <img
+                src="/mockup2.png"
+                alt="Mockup do Método Banjo na Roda e todos os materiais bônus inclusos"
+                loading="lazy"
+                className="w-full h-auto object-contain filter drop-shadow-2xl select-none"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+
+          {/* LISTA VERTICAL DE CONTEÚDOS INCLUSOS COM DIVISÓRIAS DISCRETAS */}
+          <div className="space-y-1 pt-5 border-t border-neutral-150/70">
+            <div className="pb-2 flex items-center gap-2">
+              <span className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-neutral-400">
+                O QUE ESTÁ INCLUSO NO MÉTODO:
+              </span>
+            </div>
+
+            <div className="divide-y divide-neutral-150/70">
+              {coreFeatures.map((feature, idx) => (
+                <div
+                  key={idx}
+                  className="py-2.5 sm:py-3 flex items-center gap-3 sm:gap-3.5"
+                >
+                  <div className="shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+                    <Check className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[3]" />
+                  </div>
+                  <span className="text-[13px] sm:text-[15px] font-semibold text-neutral-800 leading-snug">
+                    {feature}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* DESTAQUE DOS 4 BÔNUS ESPECIAIS */}
+          <div className="pt-5 sm:pt-6 space-y-3.5 border-t border-neutral-150/70">
+            <div className="flex items-center gap-2 pb-0.5">
+              <Gift className="w-4 h-4 text-gold" />
+              <span className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-neutral-900">
+                VOCÊ TAMBÉM RECEBE ESSES 4 BÔNUS EXCLUSIVOS:
+              </span>
+            </div>
+
+            <div className="space-y-2.5 sm:space-y-3">
+              {bonuses.map((bonus, idx) => (
+                <div
+                  key={idx}
+                  className="p-3.5 sm:p-4 rounded-2xl bg-[#FBF9F4] border border-amber-200/70 shadow-xs transition-colors hover:border-amber-300"
+                >
+                  <div className="flex items-start gap-3">
+                    <div className="shrink-0 text-lg sm:text-xl mt-0.5">🎁</div>
+                    <div className="space-y-0.5">
+                      <div className="flex flex-wrap items-center gap-2">
+                        <span className="text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-900 border border-amber-500/25">
+                          BÔNUS #{bonus.number}
+                        </span>
+                        <h4 className="text-[13px] sm:text-sm font-black text-neutral-900">
+                          {bonus.title}
+                        </h4>
+                      </div>
+                      <p className="text-[12px] sm:text-[13px] text-neutral-600 font-normal leading-relaxed">
+                        {bonus.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
+              ))}
+            </div>
+          </div>
 
-        {/* Highlighting Box - You still receive 4 exclusive bonuses */}
-        <div className="max-w-2xl mx-auto bg-gradient-to-r from-emerald-500/10 via-emerald-500/5 to-transparent border border-emerald-500/20 rounded-2xl p-4.5 sm:p-5 flex items-center gap-4 shadow-sm relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl pointer-events-none"></div>
-          
-          <div className="w-11 h-11 rounded-xl bg-emerald-500 flex items-center justify-center text-white flex-shrink-0 shadow-md">
-            <Gift className="w-5 h-5 text-white fill-emerald-100/30" />
-          </div>
-          
-          <div className="space-y-1">
-            <p className="text-xs sm:text-sm font-black text-neutral-800 leading-snug">
-              🎁 Você ainda recebe 4 bônus exclusivos sem custo adicional.
-            </p>
-            <p className="text-[10px] sm:text-xs text-neutral-500 font-semibold leading-normal">
-              O dicionário de acordes, o cronograma de treino, as mais de 300 cifras e as atualizações já estão inclusos no seu desconto promocional!
+          {/* BOTÃO CTA DE CONVERSÃO NO FINAL DO BLOCO */}
+          <div className="pt-5 sm:pt-6 text-center space-y-2.5 border-t border-neutral-150/70">
+            <div className="flex justify-center">
+              <button
+                onClick={scrollToOffer}
+                className="w-full sm:w-auto px-7 sm:px-12 py-4 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer text-sm sm:text-base leading-none uppercase tracking-wider inline-flex items-center justify-center glow-btn"
+              >
+                QUERO RECEBER TUDO ISSO AGORA
+              </button>
+            </div>
+            <p className="text-[11px] sm:text-xs text-neutral-500 font-medium">
+              ⚡ Acesso imediato no seu e-mail logo após a confirmação do pagamento
             </p>
           </div>
+
         </div>
 
       </div>

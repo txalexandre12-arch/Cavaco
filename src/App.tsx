@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import HeroSection from "./components/HeroSection";
+import InsidePreviewSection from "./components/InsidePreviewSection";
 import ProblemsAndSolutionSection from "./components/ProblemsAndSolutionSection";
 import OQueVaiReceberSection from "./components/OQueVaiReceberSection";
 import TestimonialsSection from "./components/TestimonialsSection";
@@ -38,6 +39,9 @@ export default function App() {
         
         {/* 1. HERO FOLD */}
         <HeroSection />
+
+        {/* NOVA SEÇÃO: VEJA POR DENTRO O QUE VOCÊ VAI APRENDER */}
+        <InsidePreviewSection />
 
         {/* COMPREHENSIVE PROBLEMS & SOLUTIONS */}
         <ProblemsAndSolutionSection />
