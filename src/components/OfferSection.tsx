@@ -1,5 +1,5 @@
 import React, { useState, Suspense, lazy } from "react";
-import { Check, Star } from "lucide-react";
+import { Check, Star, MessageCircle } from "lucide-react";
 
 const SpecialOfferModal = lazy(() => import("./SpecialOfferModal"));
 
@@ -146,7 +146,13 @@ export default function OfferSection() {
                 >
                   🎸 QUERO O PLANO BÁSICO
                 </button>
-                <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-2.5 uppercase">
+                <div className="flex items-center justify-center gap-1.5 mt-2.5 text-[9.5px] min-[360px]:text-[10.5px] sm:text-xs font-bold text-neutral-700 tracking-tight text-center leading-tight">
+                  <MessageCircle className="w-3.5 h-3.5 text-[#22C55E] shrink-0 fill-[#22C55E]/15" />
+                  <span>
+                    ACESSO ENVIADO PELO <span className="text-[#16A34A] font-extrabold">WHATSAPP</span> APÓS A COMPRA
+                  </span>
+                </div>
+                <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-2 uppercase">
                   🔒 Pagamento seguro • Sem cobranças adicionais
                 </p>
               </div>
@@ -287,7 +293,13 @@ export default function OfferSection() {
                 >
                   🔥 QUERO O PLANO COMPLETO
                 </a>
-                <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-2.5 uppercase">
+                <div className="flex items-center justify-center gap-1.5 mt-2.5 text-[9.5px] min-[360px]:text-[10.5px] sm:text-xs font-bold text-neutral-700 tracking-tight text-center leading-tight">
+                  <MessageCircle className="w-3.5 h-3.5 text-[#22C55E] shrink-0 fill-[#22C55E]/15" />
+                  <span>
+                    ACESSO ENVIADO PELO <span className="text-[#16A34A] font-extrabold">WHATSAPP</span> APÓS A COMPRA
+                  </span>
+                </div>
+                <p className="text-[9px] text-neutral-400 text-center font-bold tracking-wide mt-2 uppercase">
                   🔒 Pagamento seguro • Sem cobranças adicionais
                 </p>
               </div>
