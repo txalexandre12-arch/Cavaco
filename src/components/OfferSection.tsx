@@ -209,6 +209,19 @@ export default function OfferSection() {
                     </span>
                   </div>
 
+                  {/* Videoaulas Exclusivas */}
+                  <div className="flex items-center justify-between gap-2 text-left">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-sm select-none shrink-0">🎬</span>
+                      <span className="text-xs sm:text-[13px] font-semibold text-neutral-800 tracking-tight leading-snug">
+                        Videoaulas de Banjo Passo a Passo
+                      </span>
+                    </div>
+                    <span className="shrink-0 inline-block px-1.5 py-0.5 rounded-md bg-emerald-50 border border-emerald-100 text-emerald-700 text-[8px] sm:text-[9px] font-black uppercase tracking-wider select-none leading-none">
+                      EXCLUSIVO
+                    </span>
+                  </div>
+
                   {/* Bônus */}
                   {completeBonusItems.map((item, idx) => (
                     <div key={idx} className="flex items-center justify-between gap-2 text-left">
