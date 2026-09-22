@@ -22,20 +22,17 @@ export default function HeroSection() {
           Um método passo a passo para aprender acordes, palhetadas, levadas e repicadas — mesmo que você nunca tenha tocado antes.
         </p>
 
-        {/* Mockup do material - LCP instantâneo sem delay de decodificação ou animação */}
-        <div className="flex justify-center w-[88%] sm:w-[60%] max-w-[600px] mx-auto py-1 sm:py-2 mb-[32px] sm:mb-8">
-          <img
-            src="/mockup-mobile.webp"
-            srcSet="/mockup-mobile.webp 640w, /mockup.webp 1000w"
-            sizes="(max-width: 640px) 88vw, 600px"
-            alt="Mockup do material Banjo na Prática"
-            width={600}
-            height={400}
-            fetchPriority="high"
-            decoding="sync"
-            className="w-full h-auto aspect-[3/2] object-contain drop-shadow-2xl"
-            referrerPolicy="no-referrer"
-          />
+        {/* Vídeo de demonstração (YouTube Shorts) */}
+        <div className="flex justify-center w-full max-w-[340px] sm:max-w-[360px] mx-auto py-1 sm:py-2 mb-[30px] sm:mb-8">
+          <div className="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200/80 bg-black relative">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/WGbAORJrXUg?rel=0&modestbranding=1&playsinline=1"
+              title="Vídeo de demonstração - Banjo na Prática"
+              className="w-full h-full border-0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
         </div>
 
         {/* Centered CTA - High Contrast Clean Button without side clutter */}
