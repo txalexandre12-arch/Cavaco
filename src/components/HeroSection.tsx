@@ -1,25 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 export default function HeroSection() {
-  useEffect(() => {
-    // Carrega o script base do Wistia se ainda não presente
-    if (!document.querySelector('script[src="https://fast.wistia.com/player.js"]')) {
-      const script1 = document.createElement("script");
-      script1.src = "https://fast.wistia.com/player.js";
-      script1.async = true;
-      document.head.appendChild(script1);
-    }
-
-    // Carrega o script específico da mídia Wistia
-    if (!document.querySelector('script[src="https://fast.wistia.com/embed/1awmapm7d7.js"]')) {
-      const script2 = document.createElement("script");
-      script2.src = "https://fast.wistia.com/embed/1awmapm7d7.js";
-      script2.async = true;
-      script2.type = "module";
-      document.head.appendChild(script2);
-    }
-  }, []);
-
   return (
     <section id="hero-section" className="relative pt-6 pb-8 sm:pt-16 sm:pb-32 bg-white overflow-hidden px-4 sm:px-6">
       
@@ -41,32 +22,13 @@ export default function HeroSection() {
           Um método passo a passo para aprender acordes, palhetadas, levadas e repicadas — mesmo que você nunca tenha tocado antes.
         </p>
 
-        {/* Vídeo de demonstração (Wistia Player 9:16) */}
-        <div className="flex justify-center w-full max-w-[320px] sm:max-w-[360px] mx-auto py-1 sm:py-2 mb-[30px] sm:mb-8">
-          <div className="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200/80 bg-black relative">
-            <style
-              dangerouslySetInnerHTML={{
-                __html: `
-                  wistia-player[media-id='1awmapm7d7']:not(:defined) {
-                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/1awmapm7d7/swatch');
-                    display: block;
-                    filter: blur(5px);
-                    padding-top: 177.78%;
-                  }
-                  wistia-player[media-id='1awmapm7d7'] {
-                    width: 100% !important;
-                    height: 100% !important;
-                    display: block;
-                  }
-                `,
-              }}
-            />
-            {React.createElement("wistia-player", {
-              "media-id": "1awmapm7d7",
-              aspect: "0.5625",
-              className: "w-full h-full",
-            })}
-          </div>
+        {/* Mockup do material */}
+        <div className="flex justify-center w-[88%] sm:w-[60%] max-w-[600px] mx-auto py-1 sm:py-2 mb-[32px] sm:mb-8">
+          <img
+            src="/mockup.png"
+            alt="Mockup do material Banjo na Prática"
+            className="w-full h-auto object-contain drop-shadow-2xl"
+          />
         </div>
 
         {/* Centered CTA - High Contrast Clean Button without side clutter */}
