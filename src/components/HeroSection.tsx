@@ -10,20 +10,19 @@ export default function HeroSection() {
       <div className="max-w-3xl mx-auto relative z-10 text-center select-none">
         
         {/* Core Headline with supreme display typography */}
-        <h1 className="text-[26px] min-[360px]:text-[29px] min-[400px]:text-[33px] sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-[1.08] sm:leading-[1.1] uppercase mb-3 sm:mb-4 text-center">
-          <span className="block sm:inline">DO ZERO ÀS PRIMEIRAS </span>
-          <span className="block sm:inline">
-            LEVADAS <span className="text-gold">NO BANJO</span>
-          </span>
+        <h1 className="text-[25px] min-[360px]:text-[27px] min-[390px]:text-[30px] min-[414px]:text-[32px] sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-[1.12] sm:leading-[1.1] uppercase mb-3 sm:mb-4 text-center">
+          <span className="block">DESTRAVE SEU BANJO</span>
+          <span className="block font-bold">COM MAIS DE</span>
+          <span className="block text-[#C9A227] text-[28px] min-[360px]:text-[30px] min-[390px]:text-[34px] min-[414px]:text-[36px] sm:text-6xl tracking-wide mt-0.5">300 EXERCÍCIOS!</span>
         </h1>
 
         {/* Elegant clean subheadline */}
-        <p className="text-neutral-600 text-base sm:text-xl leading-snug sm:leading-relaxed max-w-2xl mx-auto font-light mb-5 sm:mb-6">
-          Um método passo a passo para aprender acordes, palhetadas, levadas e repicadas — mesmo que você nunca tenha tocado antes.
+        <p className="text-neutral-600 text-sm min-[360px]:text-[15px] sm:text-lg leading-relaxed max-w-2xl mx-auto font-normal px-1 sm:px-0 mb-4 sm:mb-6 text-center">
+          Aprenda novos acordes, aperfeiçoe suas levadas e evolua no banjo com exercícios práticos, cifras e um método organizado para estudar no seu ritmo.
         </p>
 
         {/* Mockup do material */}
-        <div className="flex justify-center w-[88%] sm:w-[60%] max-w-[600px] mx-auto py-1 sm:py-2 mb-[32px] sm:mb-8">
+        <div className="flex justify-center w-[88%] sm:w-[60%] max-w-[560px] mx-auto py-0 sm:py-1 mb-5 sm:mb-6">
           <img
             src="/mockup.png"
             alt="Mockup do material Banjo na Prática"
@@ -32,7 +31,7 @@ export default function HeroSection() {
         </div>
 
         {/* Centered CTA - High Contrast Clean Button without side clutter */}
-        <div className="flex flex-col items-center justify-center mb-[14px] sm:mb-8">
+        <div className="flex flex-col items-center justify-center mb-3 sm:mb-6">
           <button
             onClick={() => {
               const offerSec = document.getElementById("offer-section");
@@ -42,9 +41,9 @@ export default function HeroSection() {
                 window.dispatchEvent(new CustomEvent("load-and-scroll-offer"));
               }
             }}
-            className="w-full sm:w-auto px-12 py-5.5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-colors duration-200 flex items-center justify-center cursor-pointer text-base sm:text-lg leading-none uppercase tracking-wider block"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4.5 sm:py-5.5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center cursor-pointer text-sm min-[360px]:text-base sm:text-lg leading-tight uppercase tracking-wide text-center"
           >
-            QUERO APRENDER AGORA
+            QUERO DESTRAVAR MEU BANJO
           </button>
         </div>
 
