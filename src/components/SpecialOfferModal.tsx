@@ -95,7 +95,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Dicionário de Acordes</span>
+                    <span>Dicionário de Acordes com +1.000 Shapes</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />

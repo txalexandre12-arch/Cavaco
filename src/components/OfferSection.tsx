@@ -14,7 +14,7 @@ export default function OfferSection() {
     },
     {
       icon: "🎁",
-      text: "Dicionário Visual de Acordes",
+      text: "Dicionário de Acordes com +1.000 Shapes",
       badge: "BÔNUS",
     },
     {

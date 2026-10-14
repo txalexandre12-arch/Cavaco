@@ -21,8 +21,8 @@ export default function OQueVaiReceberSection() {
     },
     {
       number: "2",
-      title: "Dicionário de Acordes",
-      description: "Consulte rapidamente os principais acordes sempre que precisar.",
+      title: "Dicionário de Acordes com +1.000 Shapes",
+      description: "Tenha acesso a mais de 1.000 posições de acordes para ampliar seu repertório e evoluir no banjo.",
     },
     {
       number: "3",

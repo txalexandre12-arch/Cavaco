@@ -1,6 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 export default function HeroSection() {
+  useEffect(() => {
+    // Carrega o script base do Wistia se ainda não presente
+    if (!document.querySelector('script[src="https://fast.wistia.com/player.js"]')) {
+      const script1 = document.createElement("script");
+      script1.src = "https://fast.wistia.com/player.js";
+      script1.async = true;
+      document.head.appendChild(script1);
+    }
+
+    // Carrega o script específico da mídia Wistia
+    if (!document.querySelector('script[src="https://fast.wistia.com/embed/z1l5490jxy.js"]')) {
+      const script2 = document.createElement("script");
+      script2.src = "https://fast.wistia.com/embed/z1l5490jxy.js";
+      script2.async = true;
+      script2.type = "module";
+      document.head.appendChild(script2);
+    }
+  }, []);
+
   return (
     <section id="hero-section" className="relative pt-6 pb-8 sm:pt-16 sm:pb-32 bg-white overflow-hidden px-4 sm:px-6">
       
@@ -10,23 +29,43 @@ export default function HeroSection() {
       <div className="max-w-3xl mx-auto relative z-10 text-center select-none">
         
         {/* Core Headline with supreme display typography */}
-        <h1 className="text-[25px] min-[360px]:text-[27px] min-[390px]:text-[30px] min-[414px]:text-[32px] sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-[1.12] sm:leading-[1.1] uppercase mb-3 sm:mb-4 text-center">
-          <span className="block">TUDO O QUE VOCÊ PRECISA</span>
-          <span className="block text-[#C9A227] tracking-wide mt-0.5">PARA EVOLUIR NO BANJO!</span>
+        <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-[25px] sm:text-4xl md:text-5xl font-display font-extrabold text-neutral-900 tracking-tight leading-[1.18] sm:leading-[1.15] uppercase mb-4 sm:mb-6 text-center max-w-2xl mx-auto px-2">
+          <span className="block text-neutral-900">TUDO O QUE VOCÊ PRECISA</span>
+          <span className="block text-[#C9A227] tracking-normal mt-1 sm:mt-1.5">PARA EVOLUIR NO BANJO!</span>
         </h1>
 
-        {/* Elegant clean subheadline */}
-        <p className="text-neutral-600 text-sm min-[360px]:text-[15px] sm:text-lg leading-relaxed max-w-2xl mx-auto font-normal px-1 sm:px-0 mb-4 sm:mb-6 text-center">
-          Aprenda novos acordes, aperfeiçoe suas levadas e evolua no banjo com exercícios práticos, cifras e um método organizado para estudar no seu ritmo.
-        </p>
-
-        {/* Mockup do material */}
-        <div className="flex justify-center w-[88%] sm:w-[60%] max-w-[560px] mx-auto py-0 sm:py-1 mb-5 sm:mb-6">
-          <img
-            src="/mockup.png"
-            alt="Mockup do material Banjo na Prática"
-            className="w-full h-auto object-contain drop-shadow-2xl"
-          />
+        {/* VSL Wistia Player 9:16 (Limitado a 300px desktop, até 280px mobile, sem scrollbars) */}
+        <div className="flex justify-center w-full max-w-[280px] sm:max-w-[300px] mx-auto mb-5 sm:mb-6">
+          <div className="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border border-neutral-200/80 bg-black relative">
+            <style
+              dangerouslySetInnerHTML={{
+                __html: `
+                  wistia-player[media-id='z1l5490jxy']:not(:defined) {
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z1l5490jxy/swatch');
+                    display: block;
+                    padding-top: 177.78%;
+                  }
+                  wistia-player[media-id='z1l5490jxy'] {
+                    width: 100% !important;
+                    height: 100% !important;
+                    display: block;
+                    overflow: hidden !important;
+                  }
+                  wistia-player[media-id='z1l5490jxy'] iframe {
+                    width: 100% !important;
+                    height: 100% !important;
+                    border: 0 !important;
+                    overflow: hidden !important;
+                  }
+                `,
+              }}
+            />
+            {React.createElement("wistia-player", {
+              "media-id": "z1l5490jxy",
+              aspect: "0.5625",
+              className: "w-full h-full overflow-hidden block",
+            })}
+          </div>
         </div>
 
         {/* Centered CTA - High Contrast Clean Button without side clutter */}
@@ -40,9 +79,9 @@ export default function HeroSection() {
                 window.dispatchEvent(new CustomEvent("load-and-scroll-offer"));
               }
             }}
-            className="w-full sm:w-auto px-6 sm:px-12 py-4.5 sm:py-5.5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center cursor-pointer text-sm min-[360px]:text-base sm:text-lg leading-tight uppercase tracking-wide text-center"
+            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center cursor-pointer text-sm min-[360px]:text-base sm:text-lg leading-tight uppercase tracking-wide text-center"
           >
-            GARANTIR O MATERIAL AGORA
+            Quero garantir o material agora
           </button>
         </div>
 
