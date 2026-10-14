@@ -11,9 +11,8 @@ export default function HeroSection() {
         
         {/* Core Headline with supreme display typography */}
         <h1 className="text-[25px] min-[360px]:text-[27px] min-[390px]:text-[30px] min-[414px]:text-[32px] sm:text-6xl font-display font-extrabold text-neutral-900 tracking-tight leading-[1.12] sm:leading-[1.1] uppercase mb-3 sm:mb-4 text-center">
-          <span className="block">DESTRAVE SEU BANJO</span>
-          <span className="block font-bold">COM MAIS DE</span>
-          <span className="block text-[#C9A227] text-[28px] min-[360px]:text-[30px] min-[390px]:text-[34px] min-[414px]:text-[36px] sm:text-6xl tracking-wide mt-0.5">300 EXERCÍCIOS!</span>
+          <span className="block">TUDO O QUE VOCÊ PRECISA</span>
+          <span className="block text-[#C9A227] tracking-wide mt-0.5">PARA EVOLUIR NO BANJO!</span>
         </h1>
 
         {/* Elegant clean subheadline */}
@@ -43,7 +42,7 @@ export default function HeroSection() {
             }}
             className="w-full sm:w-auto px-6 sm:px-12 py-4.5 sm:py-5.5 bg-[#22C55E] hover:bg-[#1db053] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center cursor-pointer text-sm min-[360px]:text-base sm:text-lg leading-tight uppercase tracking-wide text-center"
           >
-            QUERO DESTRAVAR MEU BANJO
+            GARANTIR O MATERIAL AGORA
           </button>
         </div>
 

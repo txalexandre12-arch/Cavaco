@@ -87,7 +87,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-neutral-700 font-medium">
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Método Banjo na Roda</span>
+                    <span>Apostila Banjo na Roda</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />

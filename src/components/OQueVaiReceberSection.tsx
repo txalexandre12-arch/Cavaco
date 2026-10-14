@@ -3,7 +3,7 @@ import { Check, Zap, Gift } from "lucide-react";
 
 export default function OQueVaiReceberSection() {
   const coreFeatures = [
-    "Método Banjo na Roda completo",
+    "Apostila Banjo na Roda",
     "Acordes essenciais explicados de forma visual",
     "Levadas de samba e pagode passo a passo",
     "Repicadas e variações para deixar seu som mais completo",

@@ -42,7 +42,7 @@ export default function OfferSection() {
         {/* TÍTULO DA SEÇÃO */}
         <div className="text-center space-y-1.5 max-w-xl mx-auto">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-neutral-900 tracking-tight flex items-center justify-center gap-2">
-            <span>🎁</span> VOCÊ RECEBERÁ HOJE:
+            🎸 ESCOLHA O PLANO IDEAL PARA VOCÊ
           </h2>
           <p className="text-xs sm:text-sm text-neutral-500 font-medium">
             Escolha o plano ideal para a sua jornada no banjo
@@ -95,7 +95,7 @@ export default function OfferSection() {
                         <Check className="w-3.5 h-3.5" />
                       </div>
                       <span className="text-xs sm:text-[13px] font-bold text-neutral-900 tracking-tight">
-                        Método Banjo na Roda
+                        Apostila Banjo na Roda
                       </span>
                     </div>
                     <p className="text-[11px] text-neutral-500 font-medium pl-6 leading-tight">
@@ -205,7 +205,7 @@ export default function OfferSection() {
                       <Check className="w-3.5 h-3.5" />
                     </div>
                     <span className="text-xs sm:text-[13px] font-bold text-neutral-900 tracking-tight leading-snug">
-                      Método Banjo na Roda
+                      Apostila Banjo na Roda
                     </span>
                   </div>
 
