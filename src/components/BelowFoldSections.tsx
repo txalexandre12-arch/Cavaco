@@ -12,10 +12,13 @@ interface BelowFoldSectionsProps {
 }
 
 export default function BelowFoldSections({ onOpenSupport }: BelowFoldSectionsProps) {
+  // Configuração para teste de conversão (true reativa o carrossel de prévia)
+  const showPreviewSection = false;
+
   return (
     <>
-      {/* SEÇÃO: VEJA UMA PEQUENA PRÉVIA DO MATERIAL */}
-      <InsidePreviewSection />
+      {/* SEÇÃO: VEJA UMA PEQUENA PRÉVIA DO MATERIAL (controlada para teste de conversão) */}
+      {showPreviewSection && <InsidePreviewSection />}
 
       {/* COMPREHENSIVE PROBLEMS & SOLUTIONS */}
       <ProblemsAndSolutionSection />

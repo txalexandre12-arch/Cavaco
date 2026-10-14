@@ -1,93 +1,86 @@
 import React from "react";
-import { AlertCircle, RefreshCw, Lock, Frown, Compass, Target, Sparkles, ThumbsUp } from "lucide-react";
+import { 
+  AlertCircle, 
+  RefreshCw, 
+  Music, 
+  BookOpen, 
+  Layers, 
+  PlayCircle 
+} from "lucide-react";
 
 export default function ProblemsAndSolutionSection() {
   const painPoints = [
     {
-      icon: <AlertCircle className="w-5 h-5 text-rose-500" />,
-      title: "Comprou um cavaquinho ou banjo e nunca aprendeu a tocar",
-      description: "Você começou animado, mas não sabia por onde começar e acabou desistindo.",
+      icon: <AlertCircle className="w-5 h-5 text-[#E5484D]" />,
+      title: "Tem dificuldade para trocar os acordes sem travar?",
+      description: "Você até conhece alguns acordes, mas na hora de tocar uma música acaba se perdendo.",
     },
     {
-      icon: <RefreshCw className="w-5 h-5 text-rose-500 animate-spin-slow" />,
-      title: "Fica pulando de vídeo em vídeo no YouTube",
-      description: "Cada vídeo ensina uma coisa diferente e você continua sem um método claro para evoluir.",
+      icon: <RefreshCw className="w-5 h-5 text-[#E5484D]" />,
+      title: "Aprende pelo YouTube, mas sente que não evolui?",
+      description: "Assiste a vários vídeos, aprende algumas coisas, mas não consegue organizar seus estudos.",
     },
     {
-      icon: <Lock className="w-5 h-5 text-rose-500" />,
-      title: "Tenta tocar suas músicas favoritas e trava",
-      description: "Os acordes parecem difíceis e a troca entre eles parece impossível.",
-    },
-    {
-      icon: <Frown className="w-5 h-5 text-rose-500" />,
-      title: "Acha que não tem talento para música",
-      description: "Depois de algumas tentativas frustradas, você começa a acreditar que tocar um instrumento não é para você.",
+      icon: <Music className="w-5 h-5 text-[#E5484D]" />,
+      title: "Quer tocar suas músicas favoritas, mas não sabe como avançar?",
+      description: "Faltam exercícios, cifras e um caminho claro para ganhar mais confiança no banjo.",
     },
   ];
 
-  const solutionPoints = [
+  const solutionBenefits = [
     {
-      icon: <Compass className="w-5 h-5 text-emerald-600" />,
-      title: "Aprenda seguindo um caminho simples",
-      description: "Um passo a passo criado especialmente para iniciantes.",
+      icon: <BookOpen className="w-5 h-5 text-[#16A34A]" />,
+      title: "Aprenda com um estudo organizado",
+      description: "Saiba o que praticar e desenvolva suas habilidades com exercícios progressivos.",
     },
     {
-      icon: <Target className="w-5 h-5 text-emerald-600" />,
-      title: "Saiba exatamente o que praticar",
-      description: "Sem perder tempo procurando conteúdos espalhados pela internet.",
+      icon: <Layers className="w-5 h-5 text-[#16A34A]" />,
+      title: "Amplie seu conhecimento de acordes",
+      description: "No Plano Completo, tenha acesso ao Dicionário de Acordes com +1.000 Shapes para ampliar seu repertório.",
     },
     {
-      icon: <Sparkles className="w-5 h-5 text-emerald-600" />,
-      title: "Domine os acordes e ritmos essenciais",
-      description: "Aprenda os fundamentos presentes nas músicas mais tocadas.",
-    },
-    {
-      icon: <ThumbsUp className="w-5 h-5 text-emerald-600" />,
-      title: "Toque suas primeiras músicas com confiança",
-      description: "Mesmo que você nunca tenha tocado um instrumento antes.",
+      icon: <PlayCircle className="w-5 h-5 text-[#16A34A]" />,
+      title: "Coloque seu aprendizado em prática",
+      description: "Use exercícios e cifras para aplicar os acordes em músicas de verdade.",
     },
   ];
 
   return (
     <div id="pain-and-solution-wrapper" className="bg-white">
       
-      {/* 1. PAIN POINTS SECTION */}
-      <section id="pain-section" className="py-16 sm:py-20 bg-white px-4 border-t border-neutral-100">
+      {/* ========================================================= */}
+      {/* 1. SEÇÃO DE DOR — VOCÊ TAMBÉM PASSA POR ISSO?             */}
+      {/* ========================================================= */}
+      <section id="pain-section" className="py-12 sm:py-16 bg-white px-4 sm:px-6 border-b border-neutral-100">
         <div className="max-w-4xl mx-auto">
           
           {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-            <span className="text-[10px] font-extrabold text-rose-500 bg-rose-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
-              Diagnóstico
-            </span>
-            <h2 className="text-2xl sm:text-3.5xl font-display font-black text-neutral-900 tracking-tight leading-tight">
-              Você Se Identifica Com Algum Destes Problemas?
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-2.5">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-[#111111] tracking-tight leading-tight uppercase">
+              VOCÊ TAMBÉM PASSA POR ISSO NA HORA DE TOCAR BANJO?
             </h2>
+            <p className="text-[#666666] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+              Seja você iniciante ou alguém que já toca, algumas dificuldades podem estar impedindo sua evolução.
+            </p>
           </div>
 
-          {/* Grid of 4 Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          {/* Grid de 3 Cards de Dor */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 md:gap-5">
             {painPoints.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between"
+                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-[16px] border border-[#E5E5E5] flex flex-col justify-between transition-all hover:border-neutral-300 shadow-sm"
               >
-                <div className="space-y-3.5">
-                  <div className="flex items-center justify-between">
-                    <div className="p-2.5 bg-rose-50 border border-rose-100/60 rounded-xl text-rose-500 shrink-0">
-                      {item.icon}
-                    </div>
-                    <span className="text-xs font-semibold text-red-700 bg-red-100/70 px-2.5 py-0.5 rounded-md uppercase tracking-wider">
-                      ERRO COMUM
-                    </span>
+                <div className="space-y-3">
+                  <div className="w-10 h-10 rounded-xl bg-red-50/80 border border-red-100/60 flex items-center justify-center shrink-0">
+                    {item.icon}
                   </div>
 
-                  <h3 className="text-sm sm:text-base font-extrabold text-neutral-900 leading-snug flex items-start gap-1.5">
-                    <span className="text-rose-500 select-none">❌</span>
+                  <h3 className="text-sm sm:text-[15px] font-bold text-[#111111] leading-snug">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed">
+                  <p className="text-xs sm:text-[13px] text-[#666666] leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -98,53 +91,45 @@ export default function ProblemsAndSolutionSection() {
         </div>
       </section>
 
-      {/* 2. SOLUTION SECTION */}
-      <section id="solution-section" className="py-16 sm:py-20 bg-white px-4 border-t border-neutral-100">
-        <div className="max-w-4xl mx-auto">
+      {/* ========================================================= */}
+      {/* 2. SEÇÃO DE SOLUÇÃO — CHEGA DE ESTUDAR SEM DIREÇÃO!       */}
+      {/* ========================================================= */}
+      <section id="solution-section" className="py-12 sm:py-16 bg-[#FAFAFA] px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto space-y-8 sm:space-y-10">
           
           {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-            <span className="text-[10px] font-extrabold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full uppercase tracking-wider">
-              Metodologia Prática
-            </span>
-            
-            <h2 className="text-2xl sm:text-3.5xl font-display font-black text-neutral-900 tracking-tight leading-tight">
-              🎵 A Solução Está Aqui
+          <div className="text-center max-w-2xl mx-auto space-y-2.5">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-[#111111] tracking-tight leading-tight uppercase">
+              CHEGA DE ESTUDAR <span className="text-[#D6AA2C]">SEM DIREÇÃO!</span>
             </h2>
             
-            <p className="text-neutral-500 text-xs sm:text-sm max-w-lg mx-auto">
-              Um método simples e organizado para quem deseja aprender cavaquinho e banjo do zero.
+            <p className="text-[#666666] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
+              Tenha um material organizado para praticar, desenvolver suas habilidades e evoluir no banjo no seu ritmo.
             </p>
           </div>
 
-          {/* Grid of 4 Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-            {solutionPoints.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-2xl border border-neutral-150 flex flex-col justify-between"
-              >
-                <div className="space-y-3.5">
-                  <div className="flex items-center justify-between">
-                    <div className="p-2.5 bg-emerald-50 border border-emerald-100/60 rounded-xl text-emerald-600 shrink-0">
-                      {item.icon}
-                    </div>
-                    <span className="text-xs font-semibold text-emerald-800 bg-emerald-100/70 px-2.5 py-0.5 rounded-full uppercase tracking-wider">
-                      COM NOSSO MÉTODO
-                    </span>
+          {/* Bloco Compacto e Elegante de 3 Benefícios com divisórias suaves */}
+          <div className="bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden p-5 sm:p-7 max-w-3xl mx-auto">
+            <div className="divide-y divide-neutral-150">
+              {solutionBenefits.map((item, idx) => (
+                <div 
+                  key={idx} 
+                  className={`flex items-start gap-3.5 sm:gap-4 ${idx === 0 ? "pb-5 sm:pb-6" : idx === solutionBenefits.length - 1 ? "pt-5 sm:pt-6" : "py-5 sm:py-6"}`}
+                >
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
+                    {item.icon}
                   </div>
-
-                  <h3 className="text-sm sm:text-base font-extrabold text-neutral-900 leading-snug flex items-start gap-1.5">
-                    <span className="text-emerald-600 select-none">✅</span>
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm text-neutral-500 leading-relaxed">
-                    {item.description}
-                  </p>
+                  <div className="space-y-1 text-left flex-1 min-w-0">
+                    <h3 className="text-sm sm:text-base font-bold text-[#111111] leading-snug">
+                      {item.title}
+                    </h3>
+                    <p className="text-xs sm:text-[13px] text-[#666666] leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
         </div>
