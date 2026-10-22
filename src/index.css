@@ -3,25 +3,33 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", sans-serif;
-  --color-gold: #C5A028;
-  --color-gold-bg: #F9F6F0;
-  --color-gold-border: #D4AF37;
-  --color-cta-green: #22C55E;
+  --color-bg-primary: #F7F7F3;
+  --color-bg-surface: #FFFFFF;
+  --color-text-title: #141816;
+  --color-text-body: #525A54;
+  --color-green-primary: #16A34A;
+  --color-green-dark: #15803D;
+  --color-gold-accent: #D6AE54;
+  --color-border-subtle: #E5E7EB;
 }
 
 @layer base {
   body {
-    @apply font-sans text-neutral-900 bg-white antialiased selection:bg-amber-100 selection:text-amber-900;
+    @apply font-sans text-[#141816] bg-[#F7F7F3] antialiased selection:bg-emerald-100 selection:text-emerald-900;
   }
 }
 
-/* Custom theme helpers from Sleek Interface */
+/* Custom theme helpers */
 .text-gold {
-  color: #C5A028;
+  color: #D6AE54;
 }
 
-.gold-text {
-  color: #C5A028;
+.text-title {
+  color: #141816;
+}
+
+.text-body {
+  color: #525A54;
 }
 
 .gold-bg {

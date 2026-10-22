@@ -21,22 +21,26 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section id="hero-section" className="relative pt-6 pb-8 sm:pt-14 sm:pb-24 bg-[#111111] overflow-hidden px-4 sm:px-6 w-full">
+    <section id="hero-section" className="relative pt-[22px] pb-10 sm:pt-14 sm:pb-16 bg-[#F7F7F3] border-b border-[#E5E7EB] overflow-hidden px-4 sm:px-6 w-full select-none">
       
-      {/* Soft subtle warm accent for depth */}
-      <div className="absolute top-1/3 left-1/2 w-[380px] h-[380px] bg-[#D6AA2C]/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+      {/* Luz ambiente dourada sutilíssima de fundo */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#D6AE54]/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-3xl mx-auto relative z-10 text-center select-none">
+      <div className="max-w-4xl mx-auto relative z-10 text-center">
         
-        {/* Core Headline with supreme display typography */}
-        <h1 className="text-[20px] min-[360px]:text-[22px] min-[400px]:text-[25px] sm:text-4xl md:text-5xl font-display font-extrabold tracking-tight leading-[1.18] sm:leading-[1.15] uppercase mb-4 sm:mb-6 text-center max-w-2xl mx-auto px-2">
-          <span className="block text-white">TUDO O QUE VOCÊ PRECISA</span>
-          <span className="block text-[#D6AA2C] tracking-normal mt-1 sm:mt-1.5">PARA EVOLUIR NO BANJO!</span>
+        {/* Título Principal com Hierarquia Específica e tamanho otimizado (27px a 30px no celular) */}
+        <h1 className="text-[27px] min-[360px]:text-[28px] min-[400px]:text-[30px] sm:text-[38px] md:text-[42px] font-display font-black tracking-tight leading-[1.14] sm:leading-[1.15] uppercase mb-2.5 sm:mb-3.5 max-w-3xl mx-auto text-[#141816]">
+          APRENDA BANJO COM UM <span className="text-[#16A34A]">MÉTODO ORGANIZADO</span> E TOQUE SUAS <span className="text-[#D6AE54]">MÚSICAS FAVORITAS!</span>
         </h1>
 
-        {/* VSL Wistia Player 9:16 (Limitado a 300px desktop, até 280px mobile, sem scrollbars) */}
-        <div className="flex justify-center w-full max-w-[280px] sm:max-w-[300px] mx-auto mb-5 sm:mb-6">
-          <div className="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl shadow-black/80 border border-neutral-700/60 bg-black relative">
+        {/* Subtítulo: 14px a 16px no celular, em cinza-escuro, largura limitada */}
+        <p className="text-[#525A54] text-[14.5px] min-[360px]:text-[15px] sm:text-[17px] md:text-[18px] leading-relaxed max-w-xl mx-auto font-normal mb-5 sm:mb-7 px-1">
+          Aprenda no seu ritmo com um material prático, organizado e feito para evoluir no banjo.
+        </p>
+
+        {/* Vídeo VSL / Player Principal — Mais largura no celular (até 310px) e proporção 9:16 intacta */}
+        <div className="flex justify-center w-full max-w-[305px] sm:max-w-[325px] mx-auto mb-5 sm:mb-7">
+          <div className="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-xl border border-[#E5E7EB] bg-black relative">
             <style
               dangerouslySetInnerHTML={{
                 __html: `
@@ -68,8 +72,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Centered CTA - High Contrast Clean Button without side clutter */}
-        <div className="flex flex-col items-center justify-center mb-3 sm:mb-6">
+        {/* Botão CTA Centralizado e Destacado */}
+        <div className="flex flex-col items-center justify-center mb-4 sm:mb-6">
           <button
             onClick={() => {
               const offerSec = document.getElementById("offer-section");
@@ -79,21 +83,20 @@ export default function HeroSection() {
                 window.dispatchEvent(new CustomEvent("load-and-scroll-offer"));
               }
             }}
-            className="w-full sm:w-auto px-6 sm:px-12 py-4 sm:py-5 bg-[#20C65A] hover:bg-[#1bb351] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg shadow-[#20C65A]/25 hover:shadow-xl hover:shadow-[#20C65A]/35 transition-all duration-200 flex items-center justify-center cursor-pointer text-sm min-[360px]:text-base sm:text-lg leading-tight uppercase tracking-wide text-center"
+            className="w-full sm:w-auto px-7 sm:px-12 py-4 sm:py-4.5 bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center cursor-pointer text-[15px] sm:text-[17px] leading-tight uppercase tracking-wider text-center"
           >
-            QUERO GARANTIR O MATERIAL AGORA
+            QUERO COMEÇAR A APRENDER BANJO
           </button>
         </div>
 
-        {/* Minimal Centered Trust Assurances */}
-        <div className="pt-[12px] sm:pt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-neutral-400 font-semibold tracking-wider uppercase border-t border-neutral-800 max-w-md mx-auto">
-          <span className="flex items-center gap-1.5 text-neutral-300">🔒 Compra 100% Segura</span>
-          <span className="flex items-center gap-1.5 text-neutral-300">⚡ Acesso Imediato</span>
-          <span className="flex items-center gap-1.5 text-neutral-300">🛡️ Garantia de 7 Dias</span>
+        {/* Linha Discreta de Confiança */}
+        <div className="pt-3.5 sm:pt-5 flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs sm:text-[13px] text-[#525A54] font-medium tracking-wide border-t border-[#E5E7EB] max-w-md mx-auto">
+          <span className="flex items-center gap-1.5">🔒 Compra 100% Segura</span>
+          <span className="flex items-center gap-1.5">⚡ Acesso Imediato</span>
+          <span className="flex items-center gap-1.5">🛡️ Garantia de 7 Dias</span>
         </div>
 
       </div>
     </section>
   );
 }
-

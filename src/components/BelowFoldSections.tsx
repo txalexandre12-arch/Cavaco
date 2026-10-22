@@ -1,8 +1,9 @@
 import React from "react";
-import InsidePreviewSection from "./InsidePreviewSection";
 import ProblemsAndSolutionSection from "./ProblemsAndSolutionSection";
 import OQueVaiReceberSection from "./OQueVaiReceberSection";
+import PracticalBenefitsSection from "./PracticalBenefitsSection";
 import TestimonialsSection from "./TestimonialsSection";
+import BonusSection from "./BonusSection";
 import OfferSection from "./OfferSection";
 import WarrantyAndFaqSection from "./WarrantyAndFaqSection";
 import Footer from "./Footer";
@@ -12,30 +13,30 @@ interface BelowFoldSectionsProps {
 }
 
 export default function BelowFoldSections({ onOpenSupport }: BelowFoldSectionsProps) {
-  // Configuração para teste de conversão (true reativa o carrossel de prévia)
-  const showPreviewSection = false;
-
   return (
     <>
-      {/* SEÇÃO: VEJA UMA PEQUENA PRÉVIA DO MATERIAL (controlada para teste de conversão) */}
-      {showPreviewSection && <InsidePreviewSection />}
-
-      {/* COMPREHENSIVE PROBLEMS & SOLUTIONS */}
+      {/* 2. IDENTIFICAÇÃO COM AS DORES & 3. APRESENTAÇÃO DO MÉTODO EM TRÊS ETAPAS */}
       <ProblemsAndSolutionSection />
 
-      {/* O QUE VOCÊ RECEBE */}
+      {/* 4. APRESENTAÇÃO VISUAL DOS MATERIAIS PRINCIPAIS */}
       <OQueVaiReceberSection />
 
-      {/* DEPOIMENTOS */}
+      {/* 5. BENEFÍCIOS PRÁTICOS DO APRENDIZADO */}
+      <PracticalBenefitsSection />
+
+      {/* 6. PROVA SOCIAL COM DEPOIMENTOS AUTÊNTICOS */}
       <TestimonialsSection />
 
-      {/* OFERTA CORE BOX */}
+      {/* 7. SEÇÃO EXCLUSIVA DE BÔNUS DO PLANO COMPLETO */}
+      <BonusSection />
+
+      {/* 8. COMPARAÇÃO ENTRE PLANO BÁSICO E PLANO COMPLETO (OFERTA) */}
       <OfferSection />
 
-      {/* GARANTIA + FAQ */}
+      {/* 9. GARANTIA E SEGURANÇA + 10. PERGUNTAS FREQUENTES (FAQ) + CTA FINAL */}
       <WarrantyAndFaqSection />
 
-      {/* FOOTER */}
+      {/* 11. RODAPÉ */}
       <Footer onOpenSupport={onOpenSupport} />
     </>
   );

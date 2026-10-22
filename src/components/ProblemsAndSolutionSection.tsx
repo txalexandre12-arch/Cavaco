@@ -1,135 +1,157 @@
 import React from "react";
-import { 
-  AlertCircle, 
-  RefreshCw, 
-  Music, 
-  BookOpen, 
-  Layers, 
-  PlayCircle 
-} from "lucide-react";
+import { Compass, Sparkles, TrendingUp, ArrowRight } from "lucide-react";
 
 export default function ProblemsAndSolutionSection() {
   const painPoints = [
     {
-      icon: <AlertCircle className="w-5 h-5 text-[#E5484D]" />,
-      title: "Tem dificuldade para trocar os acordes sem travar?",
-      description: "Você até conhece alguns acordes, mas na hora de tocar uma música acaba se perdendo.",
+      step: "01",
+      title: "NÃO SABE POR ONDE COMEÇAR?",
+      description: "Você encontra vários conteúdos diferentes, mas não consegue organizar uma sequência de aprendizado.",
+      icon: "🧭",
     },
     {
-      icon: <RefreshCw className="w-5 h-5 text-[#E5484D]" />,
-      title: "Aprende pelo YouTube, mas sente que não evolui?",
-      description: "Assiste a vários vídeos, aprende algumas coisas, mas não consegue organizar seus estudos.",
+      step: "02",
+      title: "SENTE QUE NÃO ESTÁ EVOLUINDO?",
+      description: "Você pratica, mas ainda encontra dificuldades para acompanhar músicas e aplicar o que aprende.",
+      icon: "📈",
     },
     {
-      icon: <Music className="w-5 h-5 text-[#E5484D]" />,
-      title: "Quer tocar suas músicas favoritas, mas não sabe como avançar?",
-      description: "Faltam exercícios, cifras e um caminho claro para ganhar mais confiança no banjo.",
+      step: "03",
+      title: "FALTA UM CAMINHO CLARO?",
+      description: "Sem um material organizado, fica difícil identificar o próximo passo e manter a constância.",
+      icon: "🎯",
     },
   ];
 
-  const solutionBenefits = [
+  const methodSteps = [
     {
-      icon: <BookOpen className="w-5 h-5 text-[#16A34A]" />,
-      title: "Aprenda com um estudo organizado",
-      description: "Saiba o que praticar e desenvolva suas habilidades com exercícios progressivos.",
+      number: "1",
+      title: "ACESSE SEU MATERIAL",
+      description: "Conheça os conteúdos disponíveis e organize sua rotina de estudos.",
+      icon: <Compass className="w-6 h-6 text-[#16A34A]" />,
+      badge: "PRIMEIRO PASSO",
     },
     {
-      icon: <Layers className="w-5 h-5 text-[#16A34A]" />,
-      title: "Amplie seu conhecimento de acordes",
-      description: "No Plano Completo, tenha acesso ao Dicionário de Acordes com +1.000 Shapes para ampliar seu repertório.",
+      number: "2",
+      title: "ESTUDE E PRATIQUE",
+      description: "Utilize as aulas e materiais para desenvolver suas habilidades no banjo.",
+      icon: <Sparkles className="w-6 h-6 text-[#16A34A]" />,
+      badge: "DESENVOLVIMENTO",
     },
     {
-      icon: <PlayCircle className="w-5 h-5 text-[#16A34A]" />,
-      title: "Coloque seu aprendizado em prática",
-      description: "Use exercícios e cifras para aplicar os acordes em músicas de verdade.",
+      number: "3",
+      title: "EVOLUA NO SEU RITMO",
+      description: "Aplique o aprendizado e avance conforme sua prática.",
+      icon: <TrendingUp className="w-6 h-6 text-[#16A34A]" />,
+      badge: "RESULTADO",
     },
   ];
 
   return (
-    <div id="pain-and-solution-wrapper" className="bg-white">
+    <div id="pain-and-method-wrapper" className="bg-[#F7F7F3]">
       
       {/* ========================================================= */}
-      {/* 1. SEÇÃO DE DOR — VOCÊ TAMBÉM PASSA POR ISSO?             */}
+      {/* 4. RECONSTRUÇÃO DA SEÇÃO DE DORES                         */}
       {/* ========================================================= */}
-      <section id="pain-section" className="py-12 sm:py-16 bg-white px-4 sm:px-6 border-b border-neutral-100">
-        <div className="max-w-4xl mx-auto">
-          
-          {/* Header */}
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10 space-y-2.5">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-[#111111] tracking-tight leading-tight uppercase">
-              VOCÊ TAMBÉM PASSA POR ISSO NA HORA DE TOCAR BANJO?
-            </h2>
-            <p className="text-[#666666] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-              Seja você iniciante ou alguém que já toca, algumas dificuldades podem estar impedindo sua evolução.
-            </p>
-          </div>
+      <section id="pain-section" className="py-14 sm:py-20 px-4 sm:px-6 max-w-5xl mx-auto">
+        
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-14 space-y-3">
+          <span className="inline-block text-[12px] font-bold tracking-widest text-[#D6AE54] uppercase bg-amber-500/10 px-3 py-1 rounded-full border border-[#D6AE54]/30">
+            Dificuldades comuns
+          </span>
+          <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-display font-black text-[#141816] tracking-tight leading-tight uppercase">
+            VOCÊ TAMBÉM SENTE QUE ESTÁ ESTUDANDO BANJO, MAS <span className="text-[#16A34A]">NÃO EVOLUI COMO GOSTARIA?</span>
+          </h2>
+          <p className="text-[#525A54] text-[17px] sm:text-[19px] max-w-2xl mx-auto leading-relaxed">
+            Sem uma sequência clara de estudos, fica muito mais difícil saber o que praticar e como desenvolver suas habilidades.
+          </p>
+        </div>
 
-          {/* Grid de 3 Cards de Dor */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4 md:gap-5">
-            {painPoints.map((item, idx) => (
-              <div
-                key={idx}
-                className="bg-[#FAFAFA] p-5 sm:p-6 rounded-[16px] border border-[#E5E5E5] flex flex-col justify-between transition-all hover:border-neutral-300 shadow-sm"
-              >
-                <div className="space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-red-50/80 border border-red-100/60 flex items-center justify-center shrink-0">
+        {/* 3 Cards Profissionais */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+          {painPoints.map((item, idx) => (
+            <div
+              key={idx}
+              className="bg-white p-7 sm:p-8 rounded-2xl border border-[#E5E7EB] shadow-sm flex flex-col justify-between hover:border-[#16A34A]/40 transition-all duration-200"
+            >
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl select-none">
                     {item.icon}
                   </div>
-
-                  <h3 className="text-sm sm:text-[15px] font-bold text-[#111111] leading-snug">
-                    {item.title}
-                  </h3>
-
-                  <p className="text-xs sm:text-[13px] text-[#666666] leading-relaxed">
-                    {item.description}
-                  </p>
+                  <span className="text-xs font-mono font-bold text-[#525A54]/60 bg-neutral-100 px-2 py-0.5 rounded">
+                    {item.step}
+                  </span>
                 </div>
-              </div>
-            ))}
-          </div>
 
+                <h3 className="text-[17px] sm:text-[18px] font-display font-black text-[#141816] leading-snug uppercase">
+                  {item.title}
+                </h3>
+
+                <p className="text-[16px] text-[#525A54] leading-relaxed font-normal">
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
+
       </section>
 
       {/* ========================================================= */}
-      {/* 2. SEÇÃO DE SOLUÇÃO — CHEGA DE ESTUDAR SEM DIREÇÃO!       */}
+      {/* 5. REFORMULAR A SEÇÃO DO MÉTODO EM 3 ETAPAS               */}
       {/* ========================================================= */}
-      <section id="solution-section" className="py-12 sm:py-16 bg-[#FAFAFA] px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto space-y-8 sm:space-y-10">
+      <section id="method-section" className="py-14 sm:py-20 px-4 sm:px-6 bg-white border-y border-[#E5E7EB]">
+        <div className="max-w-5xl mx-auto">
           
           {/* Header */}
-          <div className="text-center max-w-2xl mx-auto space-y-2.5">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-display font-black text-[#111111] tracking-tight leading-tight uppercase">
-              CHEGA DE ESTUDAR <span className="text-[#D6AA2C]">SEM DIREÇÃO!</span>
+          <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
+            <span className="inline-block text-[12px] font-bold tracking-widest text-[#16A34A] uppercase bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              Caminho de Aprendizado
+            </span>
+            <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-display font-black text-[#141816] tracking-tight leading-tight uppercase">
+              CHEGA DE ESTUDAR SEM DIREÇÃO. <span className="text-[#D6AE54]">TENHA UM CAMINHO PARA SEGUIR!</span>
             </h2>
-            
-            <p className="text-[#666666] text-xs sm:text-sm max-w-xl mx-auto leading-relaxed">
-              Tenha um material organizado para praticar, desenvolver suas habilidades e evoluir no banjo no seu ritmo.
+            <p className="text-[#525A54] text-[17px] sm:text-[19px] max-w-2xl mx-auto leading-relaxed">
+              Três etapas organizadas para transformar o seu estudo em resultados práticos no banjo.
             </p>
           </div>
 
-          {/* Bloco Compacto e Elegante de 3 Benefícios com divisórias suaves */}
-          <div className="bg-white rounded-2xl border border-neutral-200/90 shadow-sm overflow-hidden p-5 sm:p-7 max-w-3xl mx-auto">
-            <div className="divide-y divide-neutral-150">
-              {solutionBenefits.map((item, idx) => (
-                <div 
-                  key={idx} 
-                  className={`flex items-start gap-3.5 sm:gap-4 ${idx === 0 ? "pb-5 sm:pb-6" : idx === solutionBenefits.length - 1 ? "pt-5 sm:pt-6" : "py-5 sm:py-6"}`}
+          {/* 3 Etapas Conectadas (desktop: horizontal com linha / mobile: vertical) */}
+          <div className="relative">
+            
+            {/* Linha conectora visual no Desktop */}
+            <div className="hidden md:block absolute top-[52px] left-[15%] right-[15%] h-[2px] bg-gradient-to-r from-emerald-100 via-emerald-400 to-emerald-100 -z-0" />
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 relative z-10">
+              {methodSteps.map((step, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[#F7F7F3] rounded-2xl border border-[#E5E7EB] p-7 sm:p-8 flex flex-col justify-between text-center relative group hover:border-[#16A34A]/50 hover:shadow-md transition-all duration-200"
                 >
-                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5">
-                    {item.icon}
+                  {/* Badge numerado superior */}
+                  <div className="mx-auto -mt-12 mb-4 w-12 h-12 rounded-full bg-[#16A34A] text-white font-display font-black text-lg flex items-center justify-center shadow-md border-4 border-white">
+                    {step.number}
                   </div>
-                  <div className="space-y-1 text-left flex-1 min-w-0">
-                    <h3 className="text-sm sm:text-base font-bold text-[#111111] leading-snug">
-                      {item.title}
+
+                  <div className="space-y-3">
+                    <span className="inline-block text-[11px] font-extrabold tracking-wider text-[#15803D] uppercase bg-emerald-50 border border-emerald-200/70 px-2.5 py-0.5 rounded-full">
+                      {step.badge}
+                    </span>
+
+                    <h3 className="text-[17px] sm:text-[19px] font-display font-black text-[#141816] uppercase leading-tight">
+                      ETAPA {step.number} — {step.title}
                     </h3>
-                    <p className="text-xs sm:text-[13px] text-[#666666] leading-relaxed">
-                      {item.description}
+
+                    <p className="text-[16px] text-[#525A54] leading-relaxed">
+                      {step.description}
                     </p>
                   </div>
                 </div>
               ))}
             </div>
+
           </div>
 
         </div>

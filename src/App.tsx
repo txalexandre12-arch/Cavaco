@@ -67,9 +67,9 @@ export default function App() {
   return (
     <div id="sales-page-root" className="min-h-screen bg-white relative flex flex-col font-sans selection:bg-neutral-150 selection:text-neutral-900 scroll-smooth">
       
-      {/* Top Urgent Alert Bar - Crisp and Simple */}
-      <div className="bg-red-600 text-white text-center py-2.5 px-4 text-xs font-bold leading-tight flex items-center justify-center gap-2 select-none uppercase tracking-widest">
-        <span>⚡ Oferta limitada somente hoje!</span>
+      {/* Top Urgent Alert Bar - Crisp, compact and perfectly centered */}
+      <div className="bg-red-600 text-white text-center py-1.5 sm:py-2 px-4 text-[11px] sm:text-xs font-bold leading-tight flex items-center justify-center gap-1.5 select-none uppercase tracking-wider">
+        <span>⚡ OFERTA LIMITADA SOMENTE HOJE!</span>
       </div>
 
       {/* Main Structural Sales Flow */}
