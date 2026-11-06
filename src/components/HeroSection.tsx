@@ -11,9 +11,9 @@ export default function HeroSection() {
     }
 
     // Carrega o script específico da mídia Wistia
-    if (!document.querySelector('script[src="https://fast.wistia.com/embed/z1l5490jxy.js"]')) {
+    if (!document.querySelector('script[src="https://fast.wistia.com/embed/jwjc0p0hjs.js"]')) {
       const script2 = document.createElement("script");
-      script2.src = "https://fast.wistia.com/embed/z1l5490jxy.js";
+      script2.src = "https://fast.wistia.com/embed/jwjc0p0hjs.js";
       script2.async = true;
       script2.type = "module";
       document.head.appendChild(script2);
@@ -33,24 +33,25 @@ export default function HeroSection() {
           APRENDA CAVAQUINHO E BANJO COM UM <span className="text-[#16A34A]">MÉTODO ORGANIZADO</span> E TOQUE SUAS <span className="text-[#D6AE54]">MÚSICAS FAVORITAS!</span>
         </h1>
 
-        {/* Vídeo VSL / Player Principal — Mais largura no celular (até 310px) e proporção 9:16 intacta */}
-        <div className="flex justify-center w-full max-w-[305px] sm:max-w-[325px] mx-auto mb-5 sm:mb-7">
+        {/* Vídeo VSL / Player Principal — Proporção vertical 9:16 intacta, 350–380px no desktop e responsivo no celular */}
+        <div className="flex justify-center w-full max-w-[310px] min-[400px]:max-w-[330px] sm:max-w-[360px] md:max-w-[380px] mx-auto mb-5 sm:mb-7">
           <div className="w-full aspect-[9/16] rounded-2xl overflow-hidden shadow-xl border border-[#E5E7EB] bg-black relative">
             <style
               dangerouslySetInnerHTML={{
                 __html: `
-                  wistia-player[media-id='z1l5490jxy']:not(:defined) {
-                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/z1l5490jxy/swatch');
+                  wistia-player[media-id='jwjc0p0hjs']:not(:defined) {
+                    background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jwjc0p0hjs/swatch');
                     display: block;
+                    filter: blur(5px);
                     padding-top: 177.78%;
                   }
-                  wistia-player[media-id='z1l5490jxy'] {
+                  wistia-player[media-id='jwjc0p0hjs'] {
                     width: 100% !important;
                     height: 100% !important;
                     display: block;
                     overflow: hidden !important;
                   }
-                  wistia-player[media-id='z1l5490jxy'] iframe {
+                  wistia-player[media-id='jwjc0p0hjs'] iframe {
                     width: 100% !important;
                     height: 100% !important;
                     border: 0 !important;
@@ -60,7 +61,7 @@ export default function HeroSection() {
               }}
             />
             {React.createElement("wistia-player", {
-              "media-id": "z1l5490jxy",
+              "media-id": "jwjc0p0hjs",
               aspect: "0.5625",
               className: "w-full h-full overflow-hidden block",
             })}
