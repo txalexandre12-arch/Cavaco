@@ -23,7 +23,7 @@ export default function SupportModal({ isOpen, onClose }: SupportModalProps) {
     iniciante: "Sim! O método foi feito especialmente para quem está começando do zero absoluto. Você vai aprender a postura correta, os acordes mais fáceis e como fazer as batidas passo a passo.",
     celular: "Sim, você pode acessar todo o material PDF diretamente do seu celular, tablet ou computador. É super prático e as cifras são bem visíveis!",
     garantia: "Oferecemos uma garantia incondicional de 7 dias. Se você achar que não é para você, basta nos enviar uma única mensagem que devolvemos 100% do seu dinheiro, sem perguntas.",
-    conteudo: "Você vai receber o Guia de Cavaquinho, Guia de Banjo, Dicionário de Acordes, Cronograma de Treino Completo e mais de 300 cifras de samba e pagode ultra organizadas!",
+    conteudo: "Você vai receber a Apostila Completa de Cavaquinho e Banjo, Videoaulas Exclusivas, Destrava Acordes, Cronograma de Treino Completo e mais de 300 cifras de samba e pagode ultra organizadas!",
     imprimir: "Com certeza! Todo o material é em PDF de altíssima qualidade e está formatado perfeitamente para impressão, caso prefira ler no papel.",
   };
 

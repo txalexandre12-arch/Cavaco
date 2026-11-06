@@ -34,7 +34,7 @@ export default function ProblemsAndSolutionSection() {
     {
       number: "2",
       title: "ESTUDE E PRATIQUE",
-      description: "Utilize as aulas e materiais para desenvolver suas habilidades no banjo.",
+      description: "Utilize as aulas e materiais para desenvolver suas habilidades no cavaquinho e no banjo.",
       icon: <Sparkles className="w-6 h-6 text-[#16A34A]" />,
       badge: "DESENVOLVIMENTO",
     },
@@ -61,7 +61,7 @@ export default function ProblemsAndSolutionSection() {
             Dificuldades comuns
           </span>
           <h2 className="text-[26px] sm:text-[32px] md:text-[36px] font-display font-black text-[#141816] tracking-tight leading-tight uppercase">
-            VOCÊ TAMBÉM SENTE QUE ESTÁ ESTUDANDO BANJO, MAS <span className="text-[#16A34A]">NÃO EVOLUI COMO GOSTARIA?</span>
+            VOCÊ TAMBÉM SENTE QUE ESTÁ ESTUDANDO CAVAQUINHO OU BANJO, MAS <span className="text-[#16A34A]">NÃO EVOLUI COMO GOSTARIA?</span>
           </h2>
           <p className="text-[#525A54] text-[17px] sm:text-[19px] max-w-2xl mx-auto leading-relaxed">
             Sem uma sequência clara de estudos, fica muito mais difícil saber o que praticar e como desenvolver suas habilidades.
@@ -114,7 +114,7 @@ export default function ProblemsAndSolutionSection() {
               CHEGA DE ESTUDAR SEM DIREÇÃO. <span className="text-[#D6AE54]">TENHA UM CAMINHO PARA SEGUIR!</span>
             </h2>
             <p className="text-[#525A54] text-[17px] sm:text-[19px] max-w-2xl mx-auto leading-relaxed">
-              Três etapas organizadas para transformar o seu estudo em resultados práticos no banjo.
+              Três etapas organizadas para transformar o seu estudo em resultados práticos no cavaquinho e no banjo.
             </p>
           </div>
 

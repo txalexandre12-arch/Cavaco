@@ -14,10 +14,10 @@ export default function Footer({ onOpenSupport }: FooterProps) {
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 border-b border-neutral-800 pb-8">
           <div className="text-center md:text-left">
             <h3 className="text-white font-display font-black text-[16px] sm:text-[17px] uppercase tracking-wider flex items-center justify-center md:justify-start gap-2">
-              <span>🪕</span> BANJO NA RODA
+              <span>🪕</span> CAVAQUINHO E BANJO NA PRÁTICA
             </h3>
             <p className="text-[#9CA3AF] text-[13px] sm:text-[14px] mt-1">
-              O método organizado para você aprender e tocar banjo com segurança.
+              O método organizado para você aprender e tocar cavaquinho e banjo com segurança.
             </p>
           </div>
           
@@ -43,7 +43,7 @@ export default function Footer({ onOpenSupport }: FooterProps) {
           </div>
 
           <p className="text-[12px] sm:text-[13px] text-[#9CA3AF] text-center md:text-right">
-            &copy; {new Date().getFullYear()} Banjo na Roda. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} Cavaquinho e Banjo na Prática. Todos os direitos reservados.
           </p>
         </div>
 

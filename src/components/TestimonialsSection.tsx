@@ -3,9 +3,9 @@ import { MessageSquareQuote } from "lucide-react";
 
 export default function TestimonialsSection() {
   const testimonials = [
-    { id: "depoi-1", src: "/depoi1.webp", alt: "Depoimento real de aluno sobre a evolução no banjo" },
-    { id: "depoi-2", src: "/depoi2.webp", alt: "Depoimento real de aluno sobre o aprendizado no banjo" },
-    { id: "depoi-3", src: "/depoi3.webp", alt: "Depoimento real de aluno sobre o método Banjo na Roda" },
+    { id: "depoi-1", src: "/depoi1.webp", alt: "Depoimento real de aluno sobre a evolução no cavaquinho e banjo" },
+    { id: "depoi-2", src: "/depoi2.webp", alt: "Depoimento real de aluno sobre o aprendizado no cavaquinho e banjo" },
+    { id: "depoi-3", src: "/depoi3.webp", alt: "Depoimento real de aluno sobre o método Cavaquinho e Banjo na Prática" },
   ];
 
   // Duplicamos o conjunto para garantir o loop contínuo perfeitamente fluido (translate -50%)

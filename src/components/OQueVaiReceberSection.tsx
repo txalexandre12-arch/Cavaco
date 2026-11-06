@@ -5,18 +5,23 @@ export default function OQueVaiReceberSection() {
   const mainMaterials = [
     {
       id: "mat-1",
-      name: "Apostila Banjo na Roda",
+      name: "Apostila Cavaquinho e Banjo na Prática",
       image: "/previa1.webp",
     },
     {
       id: "mat-2",
-      name: "Acordes Essenciais e Levadas de Samba",
+      name: "Uma Prática, Dois Instrumentos",
       image: "/previa2.webp",
     },
     {
       id: "mat-3",
-      name: "Repicadas, Variações e Progressões",
+      name: "Acordes Maiores",
       image: "/previa3.webp",
+    },
+    {
+      id: "mat-4",
+      name: "Leve a Técnica para a Música",
+      image: "/previa4.webp",
     },
   ];
 
@@ -24,7 +29,7 @@ export default function OQueVaiReceberSection() {
   const carouselItems = [...mainMaterials, ...mainMaterials];
 
   const coreList = [
-    "Apostila Banjo na Roda em PDF de alta qualidade.",
+    "Apostila Cavaquinho e Banjo na Prática em PDF de alta qualidade.",
     "Diagramas visuais de acordes e posicionamento dos dedos.",
     "Levadas e repicadas essenciais do samba e pagode.",
     "Exercícios para agilidade e troca de acordes.",
@@ -88,15 +93,15 @@ export default function OQueVaiReceberSection() {
             VEJA TUDO O QUE VOCÊ VAI RECEBER <span className="text-[#16A34A]">AO GARANTIR SEU ACESSO</span>
           </h2>
           <p className="text-[#525A54] text-[16px] sm:text-[18px] leading-relaxed max-w-2xl mx-auto">
-            Um conjunto de materiais organizados para ajudar você a estudar e praticar banjo com mais clareza.
+            Um conjunto de materiais organizados para ajudar você a estudar e praticar cavaquinho e banjo com mais clareza.
           </p>
         </div>
 
         {/* 1. MOCKUP PRINCIPAL SOLTO E DESTACADO (95% da largura no mobile, sem caixa branca) */}
         <div className="w-[95%] sm:w-full max-w-3xl mx-auto mb-6 sm:mb-10 text-center flex justify-center">
           <img
-            src="/mockup.png"
-            alt="Mockup Principal da Apostila Banjo na Roda"
+            src="/mockup.webp"
+            alt="Mockup Principal da Apostila Cavaquinho e Banjo na Prática"
             width={720}
             height={500}
             loading="lazy"

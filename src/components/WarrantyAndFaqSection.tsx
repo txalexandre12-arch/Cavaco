@@ -16,7 +16,7 @@ export default function WarrantyAndFaqSection() {
     },
     {
       question: "O que está incluído no material?",
-      answer: "Você recebe a Apostila Banjo na Roda com os fundamentos, diagramas visuais de acordes, levadas de samba e pagode, técnicas de repicadas e exercícios práticos. No Plano Completo, inclui videoaulas passo a passo e 4 bônus exclusivos.",
+      answer: "Você recebe a Apostila Cavaquinho e Banjo na Prática com os fundamentos, diagramas visuais de acordes, levadas de samba e pagode, técnicas de repicadas e exercícios práticos. No Plano Completo, inclui videoaulas passo a passo e 4 bônus exclusivos.",
     },
     {
       question: "O material é indicado para quem está começando do zero?",
@@ -24,7 +24,7 @@ export default function WarrantyAndFaqSection() {
     },
     {
       question: "Qual é a diferença entre o Plano Básico e o Plano Completo?",
-      answer: "O Plano Básico (R$ 10,00) contém a Apostila Banjo na Roda com os acordes e levadas essenciais. O Plano Completo (R$ 27,00) inclui a Apostila, Videoaulas passo a passo, mais de 300 Cifras de Samba e Pagode, Dicionário de Acordes com +1.000 Shapes, Cronograma de Treino de 30 Dias, Atualizações Gratuitas e Suporte VIP.",
+      answer: "O Plano Básico (R$ 10,00) contém a Apostila Cavaquinho e Banjo na Prática com os acordes e levadas essenciais. O Plano Completo (R$ 27,00) inclui a Apostila, Videoaulas Exclusivas, mais de 300 Cifras de Samba e Pagode, Destrava Acordes (50 Desafios de Troca), Acordes e Levadas Essenciais, Cronograma de Treino de 30 Dias, Atualizações Gratuitas e Suporte VIP.",
     },
     {
       question: "Como funciona a garantia de 7 dias?",
@@ -32,7 +32,7 @@ export default function WarrantyAndFaqSection() {
     },
     {
       question: "Terei suporte para tirar dúvidas?",
-      answer: "Sim! Os alunos contam com canal de suporte para tirar dúvidas e receber orientações durante toda a sua jornada de estudos no banjo.",
+      answer: "Sim! Os alunos contam com canal de suporte para tirar dúvidas e receber orientações durante toda a sua jornada de estudos no cavaquinho e no banjo.",
     },
     {
       question: "Quais as formas de pagamento disponíveis?",
@@ -87,7 +87,7 @@ export default function WarrantyAndFaqSection() {
               </h2>
 
               <p className="text-[16px] sm:text-[17px] text-[#525A54] leading-relaxed">
-                Experimente a <strong>Apostila Banjo na Roda</strong> por até <strong>7 dias</strong>. Se dentro desse período você achar que o conteúdo não é o que esperava, devolvemos 100% do seu investimento.
+                Experimente a <strong>Apostila Cavaquinho e Banjo na Prática</strong> por até <strong>7 dias</strong>. Se dentro desse período você achar que o conteúdo não é o que esperava, devolvemos 100% do seu investimento.
               </p>
 
               <div className="pt-2 flex flex-wrap gap-4 justify-center md:justify-start text-[14px] text-[#141816] font-semibold">
@@ -163,7 +163,7 @@ export default function WarrantyAndFaqSection() {
             onClick={scrollToOffer}
             className="w-full sm:w-auto px-8 sm:px-12 py-4.5 bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-200 cursor-pointer text-[16px] sm:text-[18px] uppercase tracking-wider inline-flex items-center justify-center gap-2"
           >
-            QUERO COMEÇAR A TOCAR BANJO AGORA
+            QUERO COMEÇAR A TOCAR AGORA
             <ArrowRight className="w-5 h-5" />
           </button>
           <p className="text-[13px] text-[#525A54]">

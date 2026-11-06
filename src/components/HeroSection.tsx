@@ -29,14 +29,9 @@ export default function HeroSection() {
       <div className="max-w-4xl mx-auto relative z-10 text-center">
         
         {/* Título Principal com Hierarquia Específica e tamanho otimizado (27px a 30px no celular) */}
-        <h1 className="text-[27px] min-[360px]:text-[28px] min-[400px]:text-[30px] sm:text-[38px] md:text-[42px] font-display font-black tracking-tight leading-[1.14] sm:leading-[1.15] uppercase mb-2.5 sm:mb-3.5 max-w-3xl mx-auto text-[#141816]">
-          APRENDA BANJO COM UM <span className="text-[#16A34A]">MÉTODO ORGANIZADO</span> E TOQUE SUAS <span className="text-[#D6AE54]">MÚSICAS FAVORITAS!</span>
+        <h1 className="text-[27px] min-[360px]:text-[28px] min-[400px]:text-[30px] sm:text-[38px] md:text-[42px] font-display font-black tracking-tight leading-[1.14] sm:leading-[1.15] uppercase mb-5 sm:mb-7 max-w-3xl mx-auto text-[#141816]">
+          APRENDA CAVAQUINHO E BANJO COM UM <span className="text-[#16A34A]">MÉTODO ORGANIZADO</span> E TOQUE SUAS <span className="text-[#D6AE54]">MÚSICAS FAVORITAS!</span>
         </h1>
-
-        {/* Subtítulo: 14px a 16px no celular, em cinza-escuro, largura limitada */}
-        <p className="text-[#525A54] text-[14.5px] min-[360px]:text-[15px] sm:text-[17px] md:text-[18px] leading-relaxed max-w-xl mx-auto font-normal mb-5 sm:mb-7 px-1">
-          Aprenda no seu ritmo com um material prático, organizado e feito para evoluir no banjo.
-        </p>
 
         {/* Vídeo VSL / Player Principal — Mais largura no celular (até 310px) e proporção 9:16 intacta */}
         <div className="flex justify-center w-full max-w-[305px] sm:max-w-[325px] mx-auto mb-5 sm:mb-7">
@@ -85,7 +80,7 @@ export default function HeroSection() {
             }}
             className="w-full sm:w-auto px-7 sm:px-12 py-4 sm:py-4.5 bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.98] text-white font-extrabold rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center cursor-pointer text-[15px] sm:text-[17px] leading-tight uppercase tracking-wider text-center"
           >
-            QUERO COMEÇAR A APRENDER BANJO
+            QUERO APRENDER CAVAQUINHO E BANJO
           </button>
         </div>
 

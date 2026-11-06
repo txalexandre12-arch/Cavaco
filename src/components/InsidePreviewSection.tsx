@@ -8,12 +8,12 @@ interface PageItem {
 }
 
 const pages: PageItem[] = [
-  { id: 1, name: "PR1", src: "/pr1.webp", alt: "Página do material Banjo na Roda - PR1" },
-  { id: 2, name: "PR2", src: "/pr2.webp", alt: "Página do material Banjo na Roda - PR2" },
-  { id: 3, name: "PR3", src: "/pr3.webp", alt: "Página do material Banjo na Roda - PR3" },
-  { id: 4, name: "PR4", src: "/pr4.webp", alt: "Página do material Banjo na Roda - PR4" },
-  { id: 5, name: "PR5", src: "/pr5.webp", alt: "Página do material Banjo na Roda - PR5" },
-  { id: 6, name: "PR6", src: "/pr6.webp", alt: "Página do material Banjo na Roda - PR6" },
+  { id: 1, name: "PR1", src: "/pr1.webp", alt: "Página do material Cavaquinho e Banjo na Prática - PR1" },
+  { id: 2, name: "PR2", src: "/pr2.webp", alt: "Página do material Cavaquinho e Banjo na Prática - PR2" },
+  { id: 3, name: "PR3", src: "/pr3.webp", alt: "Página do material Cavaquinho e Banjo na Prática - PR3" },
+  { id: 4, name: "PR4", src: "/pr4.webp", alt: "Página do material Cavaquinho e Banjo na Prática - PR4" },
+  { id: 5, name: "PR5", src: "/pr5.webp", alt: "Página do material Cavaquinho e Banjo na Prática - PR5" },
+  { id: 6, name: "PR6", src: "/pr6.webp", alt: "Página do material Cavaquinho e Banjo na Prática - PR6" },
 ];
 
 // O conjunto de 6 itens para cada track garante loop 100% contínuo e metade de nós no DOM

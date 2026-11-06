@@ -3,24 +3,34 @@ import React from "react";
 export default function BonusSection() {
   const bonuses = [
     {
-      title: "Bônus 1 — +300 Cifras de Samba e Pagode",
-      description: "Tenha suas músicas favoritas organizadas e prontas para tocar.",
+      title: "Bônus 1 — Videoaulas Exclusivas",
+      description: "Aprenda com aulas em vídeo que mostram na prática técnicas, acordes e exercícios para cavaquinho e banjo.",
       image: "/bonus1.webp",
     },
     {
-      title: "Bônus 2 — Dicionário de +1.000 Acordes",
-      description: "Consulte mais de 1.000 posições de acordes de forma rápida e prática.",
+      title: "Bônus 2 — +300 Cifras de Samba e Pagode",
+      description: "Tenha acesso a mais de 300 cifras organizadas para ampliar seu repertório e praticar suas músicas favoritas.",
       image: "/bonus2.webp",
     },
     {
-      title: "Bônus 3 — Cronograma de Treino de 30 Dias",
-      description: "Saiba exatamente o que praticar a cada dia para evoluir no banjo.",
+      title: "Bônus 3 — Destrava Acordes: 50 Desafios de Troca",
+      description: "Pratique 50 desafios para desenvolver agilidade, coordenação e mais facilidade nas trocas de acordes.",
       image: "/bonus3.webp",
     },
     {
-      title: "Bônus 4 — Atualizações Futuras Gratuitas",
-      description: "Receba novos conteúdos e melhorias sem pagar nada a mais.",
+      title: "Bônus 4 — Acordes e Levadas Essenciais",
+      description: "Aprenda acordes fundamentais e levadas práticas para desenvolver ritmo e acompanhar músicas no cavaquinho e no banjo.",
       image: "/bonus4.webp",
+    },
+    {
+      title: "Bônus 5 — Cronograma de Treino de 30 Dias",
+      description: "Organize seus estudos com um plano de 30 dias, sabendo exatamente o que praticar para evoluir com consistência.",
+      image: "/bonus5.webp",
+    },
+    {
+      title: "Bônus 6 — Atualizações Futuras Gratuitas",
+      description: "Receba novos conteúdos, melhorias e atualizações do material sem pagar nada a mais.",
+      image: "/bonus6.webp",
     },
   ];
 

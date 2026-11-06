@@ -5,8 +5,9 @@ import { motion, AnimatePresence } from "motion/react";
 // =========================================================================
 // LINKS DE CHECKOUT (FÁCEIS DE LOCALIZAR E ALTERAR)
 // =========================================================================
-export const CHECKOUT_URL_PLANO_COMPLETO_PROMO_17 = "https://app.zuptos.com.br/checkout/20bef3de6d9fa7a9";
-export const CHECKOUT_URL_PLANO_SIMPLES_10 = "https://app.zuptos.com.br/checkout/c2bc66213299a0e0";
+export const CHECKOUT_URL_POPUP = "https://pay.wiapy.com/6iilQ0djWqG";
+export const CHECKOUT_URL_PLANO_COMPLETO_PROMO_17 = CHECKOUT_URL_POPUP;
+export const CHECKOUT_URL_PLANO_SIMPLES_10 = "https://pay.wiapy.com/giaR6YkYv6ln";
 
 interface SpecialOfferModalProps {
   isOpen: boolean;
@@ -71,7 +72,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                 </p>
 
                 <h3 className="text-xl sm:text-2xl font-display font-black text-neutral-900 tracking-tight leading-snug pt-1">
-                  Leve o <span className="text-emerald-600">PLANO COMPLETO</span> por apenas <span className="text-emerald-600">R$17,00</span>
+                  Leve o <span className="text-emerald-600">PLANO COMPLETO</span> por apenas <span className="text-emerald-600">R$19,99</span>
                 </h3>
 
                 <p className="text-xs sm:text-[13px] text-neutral-600 leading-relaxed max-w-md mx-auto">
@@ -87,7 +88,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-[11px] text-neutral-700 font-medium">
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Apostila Banjo na Roda</span>
+                    <span>Apostila Cavaquinho e Banjo na Prática</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
@@ -95,7 +96,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                    <span>Dicionário de Acordes com +1.000 Shapes</span>
+                    <span>Destrava Acordes (50 Desafios)</span>
                   </div>
                   <div className="flex items-center gap-1.5">
                     <Check className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
@@ -124,7 +125,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                   </span>
                   <span className="text-lg font-black text-emerald-600 self-start mt-0.5">R$</span>
                   <span className="text-4xl sm:text-5xl font-display font-black text-emerald-600 tracking-tight leading-none drop-shadow-xs">
-                    17,00
+                    19,99
                   </span>
                 </div>
 
@@ -140,7 +141,7 @@ export default function SpecialOfferModal({ isOpen, onClose }: SpecialOfferModal
                   href={CHECKOUT_URL_PLANO_COMPLETO_PROMO_17}
                   className="w-full py-4 px-4 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white font-black rounded-2xl text-center shadow-lg shadow-emerald-500/20 hover:shadow-emerald-500/30 transition-all duration-200 cursor-pointer text-xs sm:text-sm uppercase tracking-wider block leading-tight border border-emerald-400/30"
                 >
-                  SIM! QUERO O PLANO COMPLETO POR R$17 🔥
+                  SIM! QUERO O PLANO COMPLETO POR R$19,99 🔥
                 </a>
 
                 {/* OPÇÃO SECUNDÁRIA */}

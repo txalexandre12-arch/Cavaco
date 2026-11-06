@@ -7,7 +7,7 @@ export default function OfferSection() {
   const [isSpecialOfferOpen, setIsSpecialOfferOpen] = useState(false);
 
   const basicFeatures = [
-    "Apostila Banjo na Roda",
+    "Apostila Cavaquinho e Banjo na Prática",
     "Acordes e levadas essenciais",
     "Exercícios práticos",
     "Acesso digital imediato",
@@ -15,14 +15,15 @@ export default function OfferSection() {
   ];
 
   const bonusFeatures = [
+    "Videoaulas Exclusivas",
     "+300 Cifras de Samba e Pagode",
-    "Dicionário com +1.000 Shapes",
+    "Destrava Acordes — 50 Desafios de Troca",
+    "Acordes e Levadas Essenciais",
     "Cronograma de Treino de 30 Dias",
     "Atualizações Futuras Gratuitas",
   ];
 
   const otherFeatures = [
-    "Videoaulas exclusivas",
     "Suporte VIP prioritário",
     "Acesso vitalício e garantia de 7 dias",
   ];
@@ -60,7 +61,7 @@ export default function OfferSection() {
                   PLANO BÁSICO
                 </h3>
                 <p className="text-[14px] text-[#525A54] mt-0.5">
-                  O essencial para começar no banjo.
+                  O essencial para começar no cavaquinho e no banjo.
                 </p>
               </div>
 
@@ -68,7 +69,7 @@ export default function OfferSection() {
               <div className="w-full flex items-center justify-center py-1 sm:py-2">
                 <img
                   src="/mockup3.webp"
-                  alt="Apostila Banjo na Roda - Plano Básico"
+                  alt="Apostila Cavaquinho e Banjo na Prática - Plano Básico"
                   width={320}
                   height={200}
                   loading="lazy"
@@ -149,7 +150,7 @@ export default function OfferSection() {
                   PLANO COMPLETO
                 </h3>
                 <p className="text-[13.5px] text-[#D1D5DB] mt-0.5 leading-snug">
-                  Tudo que você precisa para estudar, praticar e evoluir no banjo.
+                  Tudo que você precisa para estudar, praticar e evoluir no cavaquinho e no banjo.
                 </p>
               </div>
 
@@ -164,7 +165,7 @@ export default function OfferSection() {
               <div className="w-full flex items-center justify-center py-1 sm:py-2">
                 <img
                   src="/mockup2.webp"
-                  alt="Plano Completo Banjo na Roda com Todos os Bônus"
+                  alt="Plano Completo Cavaquinho e Banjo na Prática com Todos os Bônus"
                   width={340}
                   height={220}
                   loading="lazy"
@@ -250,7 +251,7 @@ export default function OfferSection() {
 
               <div>
                 <a
-                  href="https://app.zuptos.com.br/checkout/535b80d2dbb7c148"
+                  href="https://pay.wiapy.com/1xoFipJuWI1G"
                   className="w-full py-4 px-4 bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.98] text-white font-extrabold rounded-[12px] text-center shadow-lg hover:shadow-emerald-900/50 transition-all duration-200 cursor-pointer text-[15.5px] sm:text-[16.5px] uppercase tracking-wider block leading-tight"
                 >
                   QUERO GARANTIR O PLANO COMPLETO
