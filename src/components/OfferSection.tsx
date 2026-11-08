@@ -251,7 +251,7 @@ export default function OfferSection() {
 
               <div>
                 <a
-                  href="https://pay.wiapy.com/1xoFipJuWI1G"
+                  href="https://app.zuptos.com.br/checkout/730c4d66999a4e31"
                   className="w-full py-4 px-4 bg-[#16A34A] hover:bg-[#15803D] active:scale-[0.98] text-white font-extrabold rounded-[12px] text-center shadow-lg hover:shadow-emerald-900/50 transition-all duration-200 cursor-pointer text-[15.5px] sm:text-[16.5px] uppercase tracking-wider block leading-tight"
                 >
                   QUERO GARANTIR O PLANO COMPLETO

@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from "motion/react";
 // =========================================================================
 // LINKS DE CHECKOUT (FÁCEIS DE LOCALIZAR E ALTERAR)
 // =========================================================================
-export const CHECKOUT_URL_POPUP = "https://pay.wiapy.com/6iilQ0djWqG";
+export const CHECKOUT_URL_PLANO_COMPLETO = "https://app.zuptos.com.br/checkout/730c4d66999a4e31";
+export const CHECKOUT_URL_POPUP = "https://app.zuptos.com.br/checkout/25d4c8d03c5e1440";
 export const CHECKOUT_URL_PLANO_COMPLETO_PROMO_17 = CHECKOUT_URL_POPUP;
-export const CHECKOUT_URL_PLANO_SIMPLES_10 = "https://pay.wiapy.com/giaR6YkYv6ln";
+export const CHECKOUT_URL_PLANO_SIMPLES_10 = "https://app.zuptos.com.br/checkout/422a1e50a4cf971e";
 
 interface SpecialOfferModalProps {
   isOpen: boolean;
