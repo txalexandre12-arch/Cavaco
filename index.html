@@ -54,14 +54,36 @@
       })();
     </script>
 
-<script>
-  window.pixelId = "lt_px_ed2093525571";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
-  document.head.appendChild(a);
-</script>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;var pageViewFired=!1;
+      n=f.fbq=function(){
+        if(arguments[0]==='track'&&arguments[1]==='PageView'){
+          if(pageViewFired)return;
+          pageViewFired=!0;
+        }
+        n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js'));
+      fbq('init', '1821749882439616');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Low Track Pixel Code -->
+    <script>
+      window.pixelId = "lt_px_ed2093525571";
+      var a = document.createElement("script");
+      a.setAttribute("async", "");
+      a.setAttribute("defer", "");
+      a.setAttribute("src", "https://lowtrack.com.br/pixel.js");
+      document.head.appendChild(a);
+    </script>
 
 
     <meta charset="UTF-8" />
@@ -102,6 +124,11 @@
     <meta property="twitter:description" content="Aprenda cavaquinho e banjo do zero com um método simples e prático." />
   </head>
   <body>
+    <!-- Meta Pixel NoScript Fallback -->
+    <noscript>
+      <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1821749882439616&ev=PageView&noscript=1" alt="" />
+    </noscript>
     <!-- HTML Pré-renderizado inicial: imagem LCP já existe no DOM no primeiro paint sem depender de JavaScript -->
     <div id="root">
       <div id="sales-page-root" class="min-h-screen bg-white relative flex flex-col font-sans selection:bg-neutral-150 selection:text-neutral-900 scroll-smooth">
